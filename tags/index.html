@@ -15,14 +15,17 @@
 
 
 
+<meta name="description" content="一个小菜鸟请多多指教">
 <meta property="og:type" content="website">
 <meta property="og:title" content="分类&amp;标签">
 <meta property="og:url" content="http://yoursite.com/tags/index.html">
 <meta property="og:site_name" content="NC��Blog">
+<meta property="og:description" content="一个小菜鸟请多多指教">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-31T12:08:48.479Z">
+<meta property="og:updated_time" content="2018-05-31T14:07:01.490Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="分类&amp;标签">
+<meta name="twitter:description" content="一个小菜鸟请多多指教">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -70,7 +73,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: true
     }
 </script>
 
@@ -104,6 +107,13 @@
         <p class="header-subtitle">����</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -159,26 +169,26 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
+                            <li><a href="/tags/随笔">随笔</a></li>
+                        
                             <li><a href="/tags/">标签云</a></li>
                         
                             <li><a href="/about/">关于我</a></li>
-                        
-                            <li><a href="/archives">归档页</a></li>
                         
                         </ul>
                     </nav>
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="/18091353302@163.com" title="Email"></a>
+                                <a class="fa 新浪微博" href="http://weibo.com/Swnwc" title="新浪微博"></a>
                             
                                 <a class="fa GitHub" href="#" title="GitHub"></a>
                             
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                                <a class="fa 网易云音乐" href="http://music.163.com/#/user/home?id=578517803" title="网易云音乐"></a>
                             
-                                <a class="fa QQ" href="#" title="QQ"></a>
+                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=2387452337&site=qq&menu=yes" title="QQ"></a>
                             
-                                <a class="fa 微信" href="/Wechat" title="微信"></a>
+                                <a class="fa 微信" href="https://u.wechat.com/MMlXHqvFxS4wmU-jpjo2NFE" title="微信"></a>
                             
                         </ul>
                     </nav>
@@ -187,7 +197,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life-Study/">Life Study</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Study/">Study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/">Work</a></li></ul>
                     </div>
                 </section>
                 
@@ -242,11 +252,11 @@
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
+                    <li><a href="/tags/随笔">随笔</a></li>
+                
                     <li><a href="/tags/">标签云</a></li>
                 
                     <li><a href="/about/">关于我</a></li>
-                
-                    <li><a href="/archives">归档页</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -254,15 +264,15 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="/18091353302@163.com" title="Email"></a>
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/Swnwc" title="新浪微博"></a>
                             
                                 <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
                             
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                                <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=578517803" title="网易云音乐"></a>
                             
-                                <a class="fa QQ" target="_blank" href="#" title="QQ"></a>
+                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2387452337&site=qq&menu=yes" title="QQ"></a>
                             
-                                <a class="fa 微信" target="_blank" href="/Wechat" title="微信"></a>
+                                <a class="fa 微信" target="_blank" href="https://u.wechat.com/MMlXHqvFxS4wmU-jpjo2NFE" title="微信"></a>
                             
                         </ul>
             </nav>
@@ -327,12 +337,12 @@
     <!-- Tag Cloud Page -->
     <hr>
 <br>
-
+<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/搭建博客/">搭建博客</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活百科/">生活百科</a><span class="category-list-count">1</span></li></ul>
 
 <p class="count"></p>
 
 <div class="tags">
-    <a href="/tags/Life-Study/" style="font-size: 16px; color: #808080">Life Study</a>
+    <a href="/tags/Life/" style="font-size: 16px; color: #808080">Life</a> <a href="/tags/Study/" style="font-size: 35px; color: #000">Study</a> <a href="/tags/Work/" style="font-size: 16px; color: #808080">Work</a>
 </div>
 <style>
     .category-list li{
@@ -385,9 +395,8 @@
 </script>
 
           
-        <!-- /categories/Life/
-/categories/Life/Work/
-/categories/Life/Work/Study/ -->
+        <p>一个小菜鸟请多多指教</p>
+
       
     </div>
     

@@ -15,17 +15,16 @@
 
 
 
-<meta name="description" content="新发展html是内容，css是表现，javascript是行为。Html 是最基础的，现在流行的是html5，先学会网页布局。HTML5是由HTML演化而来的。css是美化HTML页面的，为页面提供布局和格式。 精灵技术 将一个大图片里面的一部分在网页里面显示，局部显示。设置宽度和高度之后，用定位的方法来实现。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="HTML+CSS">
-<meta property="og:url" content="http://yoursite.com/2018/05/12/HTML+CSS/index.html">
+<meta name="description" content="Have a nice day!">
+<meta property="og:type" content="website">
+<meta property="og:title" content="NC��Blog">
+<meta property="og:url" content="http://yoursite.com/categories/搭建博客/网页开发/易忘/index.html">
 <meta property="og:site_name" content="NC��Blog">
-<meta property="og:description" content="新发展html是内容，css是表现，javascript是行为。Html 是最基础的，现在流行的是html5，先学会网页布局。HTML5是由HTML演化而来的。css是美化HTML页面的，为页面提供布局和格式。 精灵技术 将一个大图片里面的一部分在网页里面显示，局部显示。设置宽度和高度之后，用定位的方法来实现。">
+<meta property="og:description" content="Have a nice day!">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-12T04:00:40.863Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML+CSS">
-<meta name="twitter:description" content="新发展html是内容，css是表现，javascript是行为。Html 是最基础的，现在流行的是html5，先学会网页布局。HTML5是由HTML演化而来的。css是美化HTML页面的，为页面提供布局和格式。 精灵技术 将一个大图片里面的一部分在网页里面显示，局部显示。设置宽度和高度之后，用定位的方法来实现。">
+<meta name="twitter:title" content="NC��Blog">
+<meta name="twitter:description" content="Have a nice day!">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -57,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>HTML+CSS | NC��Blog</title>
+<title>Category: 易忘 | NC��Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,13 +66,13 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: true,
+        isPost: false,
         isArchive: false,
         isTag: false,
-        isCategory: false,
+        isCategory: true,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: true
     }
 </script>
 
@@ -107,6 +106,13 @@
         <p class="header-subtitle">����</p>
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
         
 
 
@@ -162,26 +168,26 @@
                         
                             <li><a href="/archives/">所有文章</a></li>
                         
+                            <li><a href="/tags/随笔">随笔</a></li>
+                        
                             <li><a href="/tags/">标签云</a></li>
                         
                             <li><a href="/about/">关于我</a></li>
-                        
-                            <li><a href="/archives">归档页</a></li>
                         
                         </ul>
                     </nav>
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="/18091353302@163.com" title="Email"></a>
+                                <a class="fa 新浪微博" href="http://weibo.com/Swnwc" title="新浪微博"></a>
                             
                                 <a class="fa GitHub" href="#" title="GitHub"></a>
                             
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                                <a class="fa 网易云音乐" href="http://music.163.com/#/user/home?id=578517803" title="网易云音乐"></a>
                             
-                                <a class="fa QQ" href="#" title="QQ"></a>
+                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=2387452337&site=qq&menu=yes" title="QQ"></a>
                             
-                                <a class="fa 微信" href="/Wechat" title="微信"></a>
+                                <a class="fa 微信" href="https://u.wechat.com/MMlXHqvFxS4wmU-jpjo2NFE" title="微信"></a>
                             
                         </ul>
                     </nav>
@@ -190,7 +196,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life-Study/">Life Study</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Study/">Study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/">Work</a></li></ul>
                     </div>
                 </section>
                 
@@ -245,11 +251,11 @@
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
+                    <li><a href="/tags/随笔">随笔</a></li>
+                
                     <li><a href="/tags/">标签云</a></li>
                 
                     <li><a href="/about/">关于我</a></li>
-                
-                    <li><a href="/archives">归档页</a></li>
                 
                 <div class="clearfix"></div>
                 </ul>
@@ -257,15 +263,15 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="/18091353302@163.com" title="Email"></a>
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/Swnwc" title="新浪微博"></a>
                             
                                 <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
                             
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                                <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=578517803" title="网易云音乐"></a>
                             
-                                <a class="fa QQ" target="_blank" href="#" title="QQ"></a>
+                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2387452337&site=qq&menu=yes" title="QQ"></a>
                             
-                                <a class="fa 微信" target="_blank" href="/Wechat" title="微信"></a>
+                                <a class="fa 微信" target="_blank" href="https://u.wechat.com/MMlXHqvFxS4wmU-jpjo2NFE" title="微信"></a>
                             
                         </ul>
             </nav>
@@ -273,188 +279,60 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-HTML+CSS" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2018/05/12/HTML+CSS/" class="article-date">
-      <time datetime="2018-05-12T03:55:22.189Z" itemprop="datePublished">2018-05-12</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-pages">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2018/05/31/tags/" class="archive-article-date">
+      <time datetime="2018-05-31T11:41:32.000Z" itemprop="datePublished">05-31</time>
 </a>
 
 
-    </div>
+        </div>
+         
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      HTML+CSS
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/05/31/tags/">标签</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <h2 id="新发展"><a href="#新发展" class="headerlink" title="新发展"></a>新发展</h2><p>html是内容，css是表现，javascript是行为。Html 是最基础的，现在流行的是html5，先学会网页布局。HTML5是由HTML演化而来的。css是美化HTML页面的，为页面提供布局和格式。</p>
-<h3 id="精灵技术"><a href="#精灵技术" class="headerlink" title="精灵技术"></a>精灵技术</h3><p> 将一个大图片里面的一部分在网页里面显示，局部显示。设置宽度和高度之后，用定位的方法来实现。</p>
-
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/05/12/HTML+CSS/">HTML+CSS</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Swn*</a></p>
-        <p><span>发布时间:</span>2018-05-12, 11:55:22</p>
-        <p><span>最后更新:</span>2018-05-12, 12:00:40</p>
-        <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/05/12/HTML+CSS/" title="HTML+CSS">http://yoursite.com/2018/05/12/HTML+CSS/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/05/12/HTML+CSS/　　作者: Swn*" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
-        </p>
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/搭建博客/">搭建博客</a><a class="article-category-link" href="/categories/搭建博客/网页开发/">网页开发</a><a class="article-category-link" href="/categories/搭建博客/网页开发/易忘/">易忘</a>
     </div>
 
 
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/05/31/tags/">
-                    tags
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/05/12/小贴士/">
-                    第二篇
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#新发展"><span class="toc-number">1.</span> <span class="toc-text">新发展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#精灵技术"><span class="toc-number">1.1.</span> <span class="toc-text">精灵技术</span></a></li></ol></li></ol>
-        
+          
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Life/">Life</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Study/">Study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Work/">Work</a></li></ul>
     </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
 
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
-
-    <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"HTML+CSS　| NC��Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 
     
-</div>
 
-
-
-
-
-
-
-    
-      <div class="duoshuo" id="comments">
-    <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2018/05/12/HTML+CSS/" data-title="HTML+CSS" data-url="http://yoursite.com/2018/05/12/HTML+CSS/"></div>
-    <script>
-        var duoshuoQuery = {short_name:""};
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-            s.async = true; s.charset = 'UTF-8';
-            (d.head || d.body).appendChild(s);
-        }
-
-        
-    </script>
-    
-    <script> loadComment(); </script>
-
-</div>
-    
-
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2018/05/31/tags/" title="上一篇: tags">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/2018/05/12/小贴士/" title="下一篇: 第二篇">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/tags/">tags</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/HTML+CSS/">HTML+CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/小贴士/">第二篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/My first blog/">我的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/22/hello-world/">Hello World</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
 </div>
       <footer id="footer">
     <div class="outer">
