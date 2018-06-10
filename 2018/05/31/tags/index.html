@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="Have a nice day!">
-<meta name="keywords" content="Study,Life,Work">
+<meta name="description" content="AJAX入门处理跨域的主要方法：1、JSONP    2、CORS 1、JSONP  跨域参考：https://www.jianshu.com/p/d634de6c00ce2、CORS细节可参考：http://www.ruanyifeng.com/blog/2016/04/cors.html 跨域资源共享CORS 1. 跨域资源共享（Cross-orgin resourse shairing CO">
+<meta name="keywords" content="Study">
 <meta property="og:type" content="article">
-<meta property="og:title" content="标签">
+<meta property="og:title" content="AJAX">
 <meta property="og:url" content="http://yoursite.com/2018/05/31/tags/index.html">
 <meta property="og:site_name" content="NC��Blog">
-<meta property="og:description" content="Have a nice day!">
+<meta property="og:description" content="AJAX入门处理跨域的主要方法：1、JSONP    2、CORS 1、JSONP  跨域参考：https://www.jianshu.com/p/d634de6c00ce2、CORS细节可参考：http://www.ruanyifeng.com/blog/2016/04/cors.html 跨域资源共享CORS 1. 跨域资源共享（Cross-orgin resourse shairing CO">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-31T13:58:49.198Z">
+<meta property="og:updated_time" content="2018-06-10T02:21:34.105Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签">
-<meta name="twitter:description" content="Have a nice day!">
+<meta name="twitter:title" content="AJAX">
+<meta name="twitter:description" content="AJAX入门处理跨域的主要方法：1、JSONP    2、CORS 1、JSONP  跨域参考：https://www.jianshu.com/p/d634de6c00ce2、CORS细节可参考：http://www.ruanyifeng.com/blog/2016/04/cors.html 跨域资源共享CORS 1. 跨域资源共享（Cross-orgin resourse shairing CO">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>标签 | NC��Blog</title>
+<title>AJAX | NC��Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -198,7 +198,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Study/">Study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/">Work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/life/">life</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Study/">Study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/">Work</a></li></ul>
                     </div>
                 </section>
                 
@@ -300,7 +300,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      标签
+      AJAX
     </h1>
   
 
@@ -309,13 +309,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/搭建博客/">搭建博客</a><a class="article-category-link" href="/categories/搭建博客/网页开发/">网页开发</a><a class="article-category-link" href="/categories/搭建博客/网页开发/易忘/">易忘</a>
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/易忘/">易忘</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Life/">Life</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Study/">Study</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Work/">Work</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Study/">Study</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -325,7 +325,29 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h2 id="AJAX入门"><a href="#AJAX入门" class="headerlink" title="AJAX入门"></a>AJAX入门</h2><p>处理跨域的主要方法：1、JSONP    2、CORS</p>
+<p>1、JSONP  跨域参考：<a href="https://www.jianshu.com/p/d634de6c00ce" target="_blank" rel="noopener">https://www.jianshu.com/p/d634de6c00ce</a><br>2、CORS细节可参考：<a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank" rel="noopener">http://www.ruanyifeng.com/blog/2016/04/cors.html</a></p>
+<p>跨域资源共享CORS</p>
+<pre><code>1. 跨域资源共享（Cross-orgin resourse shairing CORS）是一个W3C标准。它允许浏览器向跨源服务器。发出XMLHttpRequest请求。
+从而解决了AJAX不能跨域请求的问题。       
+
+2、 CORS需要浏览器和服务器同时支持。整个CORS通信过程，都是浏览器自动完成，不需要用户参与。
+  对于开发者来说，CORS通信与同源的 ，AJAX通信没有差别代码完全一样。浏览器一旦发现AJAX请求跨源，
+  就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。因此，实现CORS通信的关键是服务器。
+  只要服务器实现了CORS接口，就可以跨源通信。CORS允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
+</code></pre><p>AJAX简介：<br>AJAX即“Asynchronous  JavaScript  and  XML”（异步的JavaScript与XML技术）</p>
+<p>AJAX是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+<p>XMLHttpRequest对象是浏览器提供的一个API，用来顺畅地向服务器发送请求并解析服务器响应，当然整个过程中，浏览器页面不会被刷新。</p>
+<p>1.创建XMLHttpRequest对象<br>   var xhr = new XMLHttpRequest();<br>兼容各个浏览器的创建方法<br>2.准备请求<br>xhr.open(method,url,async);</p>
+<ul>
+<li>open() 的第一个参数是HTTP请求方法 - 有GET，POST，HEAD以及服务器支持的其他方法。 保证这些方法一定要是大写字母，否则其他一些浏览器（比如FireFox）可能无法处理这个请求。</li>
+<li>第二个参数是要作为请求发送目标的URL。</li>
+<li>第三个参数是true或false，表示请求是异步还是同步。true是异步，默认true。</li>
+</ul>
+<p>3.发送请求<br>xhr.send();<br>send() 方法的参数可以是任何你想发送给服务器的内容。</p>
+<p>4.处理响应</p>
+<p>1、onreadystatechange：当处理过程发生变化的时候执行下面的函数<br>2、readyState状态值<br>     1、0：请求未初始化<br>     2、1：正在加载  或  已建立服务器链接<br>     3、2：请求已发送，正在处理中（通常现在可以从响应中获取内容头）。<br>     4、3：请求在处理中；<br>     5、4：响应已完成。<br>3、responseText：服务器以文本字符的形式返回<br>4、responseXML：获得 XML形式的响应数据<br>5、对象转换为JSON格式使用JSON.stringify<br>6、json转换为对象格式用JSON.parse()<br>7、返回值一般为json字符串，可以用JSON.parse(xhr.responseText)转化为JSON对象</p>
+
       
     </div>
     
@@ -333,12 +355,12 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/05/31/tags/">标签</a></p>
+        <p><span>本文标题:</span><a href="/2018/05/31/tags/">AJAX</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Swn*</a></p>
         <p><span>发布时间:</span>2018-05-31, 19:41:32</p>
-        <p><span>最后更新:</span>2018-05-31, 21:58:49</p>
+        <p><span>最后更新:</span>2018-06-10, 10:21:34</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/05/31/tags/" title="标签">http://yoursite.com/2018/05/31/tags/</a>
+            <span>原始链接:</span><a class="post-url" href="/2018/05/31/tags/" title="AJAX">http://yoursite.com/2018/05/31/tags/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/05/31/tags/　　作者: Swn*" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -352,8 +374,8 @@
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/05/31/gt/">
-                    日常
+                <a href="/2018/05/31/书签/">
+                    书签
                 </a>
             </div>
         
@@ -372,7 +394,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#AJAX入门"><span class="toc-number">1.</span> <span class="toc-text">AJAX入门</span></a></li></ol>
         
     </div>
     <style>
@@ -408,7 +430,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"标签　| NC��Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"AJAX　| NC��Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -424,7 +446,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2018/05/31/tags/" data-title="标签" data-url="http://yoursite.com/2018/05/31/tags/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2018/05/31/tags/" data-title="AJAX" data-url="http://yoursite.com/2018/05/31/tags/"></div>
     <script>
         var duoshuoQuery = {short_name:""};
         var loadComment = function(){
@@ -447,7 +469,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/05/31/gt/" title="上一篇: 日常">
+            <a href="/2018/05/31/书签/" title="上一篇: 书签">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -461,7 +483,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/gt/">日常</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/tags/">标签</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/HTML+CSS/">HTML+CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/categories/">第一个分类</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/小贴士/">第二篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/My first blog/">我的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/22/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/English note/">English</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/书签/">书签</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/tags/">AJAX</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/HTML+CSS/">HTML+CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/categories/">第一个分类</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/小贴士/">第二篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/My first blog/">我的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/22/hello-world/">Hello World</a></li></ul>
 
 
 
