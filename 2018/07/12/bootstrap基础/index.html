@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="莲灯诗梦" />
+
+
+
+<meta name="description" content="Bootstrap-base前端框架，优点：1、响应式布局，根据屏幕大小自动布局，不会乱                2、移动设备优先，支持手机浏览 栅格系统 Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。（把容器或者屏幕或者div平均分成12份 ）   栅格系统用于通过一系列的行（row）与列（colu">
+<meta name="keywords" content="Study">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bootstrap基础">
+<meta property="og:url" content="http://yoursite.com/2018/07/12/bootstrap基础/index.html">
+<meta property="og:site_name" content="NCのBlog">
+<meta property="og:description" content="Bootstrap-base前端框架，优点：1、响应式布局，根据屏幕大小自动布局，不会乱                2、移动设备优先，支持手机浏览 栅格系统 Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。（把容器或者屏幕或者div平均分成12份 ）   栅格系统用于通过一系列的行（row）与列（colu">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/ScreenClip.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/stylename.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/Images.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/result.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/col-offset.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/code_tao.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/form.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/bangding.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/bdresult.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/file.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/warning.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/warn-code.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/warn-result.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/glyphicon-code.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/glyphicon-result.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/btn-style.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/btn-group.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/fuzhu.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/12/bootstrap基础/fz-result.png">
+<meta property="og:updated_time" content="2018-07-12T10:09:51.727Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="bootstrap基础">
+<meta name="twitter:description" content="Bootstrap-base前端框架，优点：1、响应式布局，根据屏幕大小自动布局，不会乱                2、移动设备优先，支持手机浏览 栅格系统 Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。（把容器或者屏幕或者div平均分成12份 ）   栅格系统用于通过一系列的行（row）与列（colu">
+<meta name="twitter:image" content="http://yoursite.com/2018/07/12/bootstrap基础/ScreenClip.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="NCのBlog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>bootstrap基础 | NCのBlog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">莲灯诗梦</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">人间太吵、生活太苦</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/随笔">随笔</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:judas.n@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="http://weibo.com/Swnwc" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/Swnn" title="GitHub"></a>
+                            
+                                <a class="fa 网易云音乐" href="http://music.163.com/#/user/home?id=578517803" title="网易云音乐"></a>
+                            
+                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=2387452337&site=qq&menu=yes" title="QQ"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Study/">Study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/">Work</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">莲灯诗梦</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">莲灯诗梦</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">人间太吵、生活太苦</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/随笔">随笔</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:judas.n@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/Swnwc" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/Swnn" title="GitHub"></a>
+                            
+                                <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=578517803" title="网易云音乐"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2387452337&site=qq&menu=yes" title="QQ"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-bootstrap基础" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/12/bootstrap基础/" class="article-date">
+      <time datetime="2018-07-12T08:33:41.000Z" itemprop="datePublished">2018-07-12</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      bootstrap基础
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/基础点/">基础点</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Study/">Study</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="Bootstrap-base"><a href="#Bootstrap-base" class="headerlink" title="Bootstrap-base"></a>Bootstrap-base</h1><p>前端框架，优点：1、响应式布局，根据屏幕大小自动布局，不会乱<br>                2、移动设备优先，支持手机浏览<br><img src="/2018/07/12/bootstrap基础/ScreenClip.png" title="describe"></p>
+<h2 id="栅格系统"><a href="#栅格系统" class="headerlink" title="栅格系统"></a>栅格系统</h2><ul>
+<li>Bootstrap 提供了一套响应式、移动设备优先的流式栅格系统，随着屏幕或视口（viewport）尺寸的增加，系统会自动分为最多12列。（把容器或者屏幕或者div平均分成12份 ）</li>
+</ul>
+<ul>
+<li><p>栅格系统用于通过一系列的行（row）与列（column）的组合来创建页面布局，你的内容就可以放入这些创建好的布局中。</p>
+</li>
+<li><p>行（row）必须包含在 .container （固定宽度）或 .container-fluid （100% 宽度）中，以便为其赋予合适的排列（aligment）和内补（padding）。</p>
+<a id="more"></a></li>
+<li><p>通过行（row）在水平方向创建一组列（column）。  （一个行和多个列构成，数据放入列中）</p>
+</li>
+<li><p>你的内容应当放置于列（column）内，并且，只有列（column）可以作为行（row）的直接子元素。<br><strong>注意：</strong> 栅格系统必须放在.container和.container-fluid（两个class）中</p>
+</li>
+<li><p>栅格系统中的列是通过指定1到12的值来表示其跨越的范围。例如，三个等宽的列可以使用三个 .col-xs-4 来创建。</p>
+</li>
+<li><p>如果一行（row）中包含了的列（column）大于 12，多余的列（column）所在的元素将被作为一个整体另起一行排列。</p>
+<img src="/2018/07/12/bootstrap基础/stylename.png" title="样式名称">
+<blockquote>
+<p>简单应用</p>
+<img src="/2018/07/12/bootstrap基础/Images.png" title="简单应用">
+<p>简单实例</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">  &lt;!DOCTYPE html&gt;</span><br><span class="line">  &lt;html&gt;</span><br><span class="line">  &lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</span><br><span class="line">  &lt;title&gt;基础入门&lt;/title&gt;</span><br><span class="line">  &lt;link href=&quot;bootstrap/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;</span><br><span class="line">  &lt;!--[if lt IE 9]&gt;</span><br><span class="line">    &lt;script src=&quot;https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js&quot;&gt;&lt;/script&gt;;</span><br><span class="line">    &lt;script src=&quot;https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js&quot;&gt;&lt;/script&gt;;</span><br><span class="line">  &lt;![endif]--&gt;</span><br><span class="line"> &lt;/head&gt;</span><br><span class="line"> &lt;body style=&quot;padding:50px;background-color: #CCCCCC;&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;container&quot; style=&quot;padding: 50px;background-color: #fff;&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">          &lt;div class=&quot;col-md-6&quot; style=&quot;border: 1px solid purple;height: 150px;&quot;&gt;</span><br><span class="line">                 遇到很多新手，都会问，如果要学习web前端开发，需要学习什么？</span><br><span class="line">                 难不难？多久能入门？怎么能快速建一个网站？工资能拿到多少？</span><br><span class="line">                 还有些让我推荐一些培训机构什么的要去学习。</span><br><span class="line">                 我建议是自学，实在是觉得自己没有这个能力，确实是需要一个老师的话，</span><br><span class="line">                 那你还是自己做主找个老师吧！</span><br><span class="line">          &lt;/div&gt;</span><br><span class="line">          &lt;div class=&quot;col-md-6&quot;style=&quot;border: 1px solid purple;height: 150px;&quot;&gt;</span><br><span class="line">                如果你还是在校学生，那你得好好上课，</span><br><span class="line">                大学的教材普遍来讲都是知识面浅的。</span><br><span class="line">                虽然很多知识看起来用处不大，学起来也很枯燥，让你觉得浪费时间。</span><br><span class="line">                但这些书本上最基础的知识你都不能掌握，</span><br><span class="line">                那你以后怎么追求更精湛的技术呢。所以不要逃课，把基础知识掌握了，</span><br><span class="line">                别小看这个基础知识，它非常重要，</span><br><span class="line">                基础扎实是否也会决定你在一个职业能走多远。</span><br><span class="line">          &lt;/div&gt;   </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"> &lt;/div&gt;</span><br><span class="line"> &lt;script src=&quot;bootstrap/js/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line"> &lt;script src=&quot;bootstrap/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+</li>
+</ul>
+<p>效果展示<br> <img src="/2018/07/12/bootstrap基础/result.png" title="效果展示"><br> 如果列数超过12列，则会自动换行，如果低于12列，则无所谓。</p>
+<h2 id="列偏移"><a href="#列偏移" class="headerlink" title="列偏移"></a>列偏移</h2><p>也就是指，一个栏向右偏移多少列。<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.col-md-offset-2        //指定栏向右偏移两个列。（中间空几列）</span><br></pre></td></tr></table></figure></p>
+ <img src="/2018/07/12/bootstrap基础/col-offset.png" title="偏移示例">
+<h2 id="列嵌套"><a href="#列嵌套" class="headerlink" title="列嵌套"></a>列嵌套</h2><p>   在某个栏中再嵌套一个完整的栅格系统。<br>    <br>    <img src="/2018/07/12/bootstrap基础/code_tao.png" title="嵌套代码展示"></p>
+<h2 id="表单样式"><a href="#表单样式" class="headerlink" title="表单样式"></a>表单样式</h2><h3 id="form-group表单组样式：将和表单元素包含其中，可以获得更好的排列。"><a href="#form-group表单组样式：将和表单元素包含其中，可以获得更好的排列。" class="headerlink" title=".form-group表单组样式：将和表单元素包含其中，可以获得更好的排列。"></a>.form-group表单组样式：将<label>和表单元素包含其中，可以获得更好的排列。</label></h3><h3 id="form-control表单元素样式：常用于"><a href="#form-control表单元素样式：常用于" class="headerlink" title=".form-control表单元素样式：常用于"></a>.form-control表单元素样式：常用于</h3><p>   <code>&lt;input&gt;、&lt;textarea&gt;、&lt;select&gt;</code>元素。（撑满整个父元素，默认状态，文本在上面）<br>   <img src="/2018/07/12/bootstrap基础/form.png" title="表单示例"></p>
+<h3 id="用for和id让两个绑定在一起："><a href="#用for和id让两个绑定在一起：" class="headerlink" title="用for和id让两个绑定在一起："></a>用for和id让两个绑定在一起：</h3><img src="/2018/07/12/bootstrap基础/bangding.png" title="绑定示例">
+<img src="/2018/07/12/bootstrap基础/bdresult.png" title="绑定结果展示">
+<h3 id="用-sr-only来隐藏元素。"><a href="#用-sr-only来隐藏元素。" class="headerlink" title="用.sr-only来隐藏元素。"></a>用.sr-only来隐藏元素。</h3><h3 id="用type-”file”来上传文件"><a href="#用type-”file”来上传文件" class="headerlink" title="用type=”file”来上传文件"></a>用type=”file”来上传文件</h3>  <img src="/2018/07/12/bootstrap基础/file.png" title="上传文件示例">
+<h3 id="help-block-为帮助块"><a href="#help-block-为帮助块" class="headerlink" title=".help-block 为帮助块"></a>.help-block 为帮助块</h3><h3 id="form-inline内联表单样式-用于form元素-：可以使元素一行排列。"><a href="#form-inline内联表单样式-用于form元素-：可以使元素一行排列。" class="headerlink" title=".form-inline内联表单样式(用于form元素)：可以使元素一行排列。"></a>.form-inline内联表单样式(用于form元素)：可以使元素一行排列。</h3><h3 id="checkbox复选框样式"><a href="#checkbox复选框样式" class="headerlink" title=".checkbox复选框样式"></a>.checkbox复选框样式</h3><h3 id="radio单选框样式"><a href="#radio单选框样式" class="headerlink" title=".radio单选框样式"></a>.radio单选框样式</h3><h3 id="disabled可以禁用单选框或复选项的文本。"><a href="#disabled可以禁用单选框或复选项的文本。" class="headerlink" title=".disabled可以禁用单选框或复选项的文本。"></a>.disabled可以禁用单选框或复选项的文本。</h3><h3 id="form-horizontal水平排列的表单-用于form元素-。"><a href="#form-horizontal水平排列的表单-用于form元素-。" class="headerlink" title=".form-horizontal水平排列的表单(用于form元素)。"></a>.form-horizontal水平排列的表单(用于form元素)。</h3><p>最终结果如果要使得label和表单元素一行显示，则首先给<form class="form-horizontal"> （表单中不用row）再给相应标签加 &lt;label class=”col-md-2” ，用div将input包起来，给div加上<div class="col-md-10">，即使用上面的栅格系统，此时label和输入框距离太长，可以用class=“control-label”来控制文本之间的距离。<br>   如果要给复选框、单选框放在一行时。则要去掉<br>   <code>&lt;div class=&quot;radio/checkbox&quot;&gt;,</code><br>       直接给外面加上<br>       <code>&lt;div class=&quot;col-md-10&quot;&gt;</code><br>       即可。</div></form></p>
+<h3 id="checkbox-inline-控制多个复选框元素在同一行显示。"><a href="#checkbox-inline-控制多个复选框元素在同一行显示。" class="headerlink" title=".checkbox-inline 控制多个复选框元素在同一行显示。"></a>.checkbox-inline 控制多个复选框元素在同一行显示。</h3><h3 id="radio-inline控制多个单选框元素在同一行显示。"><a href="#radio-inline控制多个单选框元素在同一行显示。" class="headerlink" title=".radio-inline控制多个单选框元素在同一行显示。"></a>.radio-inline控制多个单选框元素在同一行显示。</h3><h3 id="textarea-文本域"><a href="#textarea-文本域" class="headerlink" title="textarea 文本域"></a>textarea 文本域</h3><h3 id="验证提示状态："><a href="#验证提示状态：" class="headerlink" title="验证提示状态："></a>验证提示状态：</h3>  <img src="/2018/07/12/bootstrap基础/warning.png" title="提示框">
+  <img src="/2018/07/12/bootstrap基础/warn-code.png" title="提示框代码">
+<p>  结果如下：<br>  <img src="/2018/07/12/bootstrap基础/warn-result.png" title="提示框结果"></p>
+<h3 id="小图标"><a href="#小图标" class="headerlink" title="小图标"></a>小图标</h3>  <img src="/2018/07/12/bootstrap基础/glyphicon-code.png" title="小图标代码">
+  <img src="/2018/07/12/bootstrap基础/glyphicon-result.png" title="小图标结果">
+<h2 id="按钮样式"><a href="#按钮样式" class="headerlink" title="按钮样式"></a>按钮样式</h2><h3 id="可作为按钮使用的元素："><a href="#可作为按钮使用的元素：" class="headerlink" title="可作为按钮使用的元素："></a>可作为按钮使用的元素：</h3><p><code>&lt;a&gt;、&lt;input&gt;、&lt;button&gt;</code></p>
+<h3 id="btn：按钮的全局样式。"><a href="#btn：按钮的全局样式。" class="headerlink" title=".btn：按钮的全局样式。"></a>.btn：按钮的全局样式。</h3><p><code>&lt;input type = “button” class = “btn”&gt;</code><br><img src="/2018/07/12/bootstrap基础/btn-style.png" title="按钮样式"></p>
+<h3 id="active按钮激活状态、-disabled按钮禁用状态"><a href="#active按钮激活状态、-disabled按钮禁用状态" class="headerlink" title=".active按钮激活状态、.disabled按钮禁用状态"></a>.active按钮激活状态、.disabled按钮禁用状态</h3><h3 id="按钮尺寸：-btn-lg-大按钮-、-btn-sm-小按钮-、-btn-xs-超小按钮"><a href="#按钮尺寸：-btn-lg-大按钮-、-btn-sm-小按钮-、-btn-xs-超小按钮" class="headerlink" title="按钮尺寸：.btn-lg(大按钮)、.btn-sm(小按钮)、.btn-xs(超小按钮)"></a>按钮尺寸：.btn-lg(大按钮)、.btn-sm(小按钮)、.btn-xs(超小按钮)</h3><h3 id="btn-block：将按钮拉伸到撑满整个父元素。"><a href="#btn-block：将按钮拉伸到撑满整个父元素。" class="headerlink" title=".btn-block：将按钮拉伸到撑满整个父元素。"></a>.btn-block：将按钮拉伸到撑满整个父元素。</h3><img src="/2018/07/12/bootstrap基础/btn-group.png" title="100%显示按钮">
+<h2 id="图片样式"><a href="#图片样式" class="headerlink" title="图片样式"></a>图片样式</h2><p>.page-header（页头）样式运行出来的结果会自动在下面加一条修饰<br> .img-responsive：直接为图片添加该样式，可以实现响应式图片<br> .center-block：图片居中样式，而不能使用text-center样式<br> 图片形状样式：.img-rounder（圆角图片）、.img-circle（圆形图片） .img-thumbnail（边框圆角）</p>
+<h2 id="辅助类样式"><a href="#辅助类样式" class="headerlink" title="辅助类样式"></a>辅助类样式</h2><ul>
+<li>文本颜色类：.text-muted(柔和的)、.text-primary、.text-success、.text-info、.text-warning、.text-danger</li>
+<li>背景颜色类：.bg-primary、.bg-success、.bg-info、.bg-warning、.bg-danger</li>
+<li>三角符号：<br><code>&lt;span class = “caret”&gt;&lt;/span&gt;</code></li>
+<li>快速浮动类：.pull-left(左浮动)、.pull-right(右浮动)</li>
+<li>清除浮动：为父元素添加 .clearfix 可以清除浮动。</li>
+<li>让内容块网页居中：<br><code>&lt;div class = “center-block”&gt;&lt;/div&gt;</code><img src="/2018/07/12/bootstrap基础/fuzhu.png" title="辅助类样式示例">
+<img src="/2018/07/12/bootstrap基础/fz-result.png" title="辅助类样式结果">
+</li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/07/12/bootstrap基础/">bootstrap基础</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">莲灯诗梦</a></p>
+        <p><span>发布时间:</span>2018-07-12, 16:33:41</p>
+        <p><span>最后更新:</span>2018-07-12, 18:09:51</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/07/12/bootstrap基础/" title="bootstrap基础">http://yoursite.com/2018/07/12/bootstrap基础/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/07/12/bootstrap基础/　　作者: 莲灯诗梦" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/07/12/bootstrap-css组件/">
+                    bootstrap-css组件
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Bootstrap-base"><span class="toc-number">1.</span> <span class="toc-text">Bootstrap-base</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#栅格系统"><span class="toc-number">1.1.</span> <span class="toc-text">栅格系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列偏移"><span class="toc-number">1.2.</span> <span class="toc-text">列偏移</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列嵌套"><span class="toc-number">1.3.</span> <span class="toc-text">列嵌套</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表单样式"><span class="toc-number">1.4.</span> <span class="toc-text">表单样式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#form-group表单组样式：将和表单元素包含其中，可以获得更好的排列。"><span class="toc-number">1.4.1.</span> <span class="toc-text">.form-group表单组样式：将和表单元素包含其中，可以获得更好的排列。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#form-control表单元素样式：常用于"><span class="toc-number">1.4.2.</span> <span class="toc-text">.form-control表单元素样式：常用于</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用for和id让两个绑定在一起："><span class="toc-number">1.4.3.</span> <span class="toc-text">用for和id让两个绑定在一起：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用-sr-only来隐藏元素。"><span class="toc-number">1.4.4.</span> <span class="toc-text">用.sr-only来隐藏元素。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#用type-”file”来上传文件"><span class="toc-number">1.4.5.</span> <span class="toc-text">用type=”file”来上传文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#help-block-为帮助块"><span class="toc-number">1.4.6.</span> <span class="toc-text">.help-block 为帮助块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#form-inline内联表单样式-用于form元素-：可以使元素一行排列。"><span class="toc-number">1.4.7.</span> <span class="toc-text">.form-inline内联表单样式(用于form元素)：可以使元素一行排列。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#checkbox复选框样式"><span class="toc-number">1.4.8.</span> <span class="toc-text">.checkbox复选框样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#radio单选框样式"><span class="toc-number">1.4.9.</span> <span class="toc-text">.radio单选框样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#disabled可以禁用单选框或复选项的文本。"><span class="toc-number">1.4.10.</span> <span class="toc-text">.disabled可以禁用单选框或复选项的文本。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#form-horizontal水平排列的表单-用于form元素-。"><span class="toc-number">1.4.11.</span> <span class="toc-text">.form-horizontal水平排列的表单(用于form元素)。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#checkbox-inline-控制多个复选框元素在同一行显示。"><span class="toc-number">1.4.12.</span> <span class="toc-text">.checkbox-inline 控制多个复选框元素在同一行显示。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#radio-inline控制多个单选框元素在同一行显示。"><span class="toc-number">1.4.13.</span> <span class="toc-text">.radio-inline控制多个单选框元素在同一行显示。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#textarea-文本域"><span class="toc-number">1.4.14.</span> <span class="toc-text">textarea 文本域</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#验证提示状态："><span class="toc-number">1.4.15.</span> <span class="toc-text">验证提示状态：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小图标"><span class="toc-number">1.4.16.</span> <span class="toc-text">小图标</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#按钮样式"><span class="toc-number">1.5.</span> <span class="toc-text">按钮样式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#可作为按钮使用的元素："><span class="toc-number">1.5.1.</span> <span class="toc-text">可作为按钮使用的元素：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#btn：按钮的全局样式。"><span class="toc-number">1.5.2.</span> <span class="toc-text">.btn：按钮的全局样式。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#active按钮激活状态、-disabled按钮禁用状态"><span class="toc-number">1.5.3.</span> <span class="toc-text">.active按钮激活状态、.disabled按钮禁用状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#按钮尺寸：-btn-lg-大按钮-、-btn-sm-小按钮-、-btn-xs-超小按钮"><span class="toc-number">1.5.4.</span> <span class="toc-text">按钮尺寸：.btn-lg(大按钮)、.btn-sm(小按钮)、.btn-xs(超小按钮)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#btn-block：将按钮拉伸到撑满整个父元素。"><span class="toc-number">1.5.5.</span> <span class="toc-text">.btn-block：将按钮拉伸到撑满整个父元素。</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片样式"><span class="toc-number">1.6.</span> <span class="toc-text">图片样式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#辅助类样式"><span class="toc-number">1.7.</span> <span class="toc-text">辅助类样式</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"bootstrap基础　| NCのBlog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2018/07/12/bootstrap基础/" data-title="bootstrap基础" data-url="http://yoursite.com/2018/07/12/bootstrap基础/"></div>
+    <script>
+        var duoshuoQuery = {short_name:""};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/07/12/bootstrap-css组件/" title="下一篇: bootstrap-css组件">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/bootstrap基础/">bootstrap基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/bootstrap-css组件/">bootstrap-css组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Photoshop/">Photoshop</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/English note/">English</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/书签/">书签</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/ajax/">AJAX</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/categories/">第一个分类</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/HTML+CSS/">HTML+CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/小贴士/">第二篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/My first blog/">我的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/22/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2018 莲灯诗梦
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 7;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

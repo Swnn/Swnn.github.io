@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="NCのBlog">
 <meta property="og:description" content="AJAX入门处理跨域的主要方法：1、JSONP    2、CORS 1、JSONP  跨域参考：https://www.jianshu.com/p/d634de6c00ce2、CORS细节可参考：http://www.ruanyifeng.com/blog/2016/04/cors.html 跨域资源共享CORS 1. 跨域资源共享（Cross-orgin resourse shairing CO">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-06-10T02:21:34.105Z">
+<meta property="og:updated_time" content="2018-07-12T08:46:57.131Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AJAX">
 <meta name="twitter:description" content="AJAX入门处理跨域的主要方法：1、JSONP    2、CORS 1、JSONP  跨域参考：https://www.jianshu.com/p/d634de6c00ce2、CORS细节可参考：http://www.ruanyifeng.com/blog/2016/04/cors.html 跨域资源共享CORS 1. 跨域资源共享（Cross-orgin resourse shairing CO">
@@ -79,7 +79,9 @@
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -181,15 +183,15 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
+                                <a class="fa Email" href="mailto:judas.n@qq.com" title="Email"></a>
+                            
                                 <a class="fa 新浪微博" href="http://weibo.com/Swnwc" title="新浪微博"></a>
                             
-                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                                <a class="fa GitHub" href="https://github.com/Swnn" title="GitHub"></a>
                             
                                 <a class="fa 网易云音乐" href="http://music.163.com/#/user/home?id=578517803" title="网易云音乐"></a>
                             
                                 <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=2387452337&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa 微信" href="/" title="微信"></a>
                             
                         </ul>
                     </nav>
@@ -265,15 +267,15 @@
             <nav class="header-nav">
                         <ul class="social">
                             
+                                <a class="fa Email" target="_blank" href="mailto:judas.n@qq.com" title="Email"></a>
+                            
                                 <a class="fa 新浪微博" target="_blank" href="http://weibo.com/Swnwc" title="新浪微博"></a>
                             
-                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                                <a class="fa GitHub" target="_blank" href="https://github.com/Swnn" title="GitHub"></a>
                             
                                 <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=578517803" title="网易云音乐"></a>
                             
                                 <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2387452337&site=qq&menu=yes" title="QQ"></a>
-                            
-                                <a class="fa 微信" target="_blank" href="/" title="微信"></a>
                             
                         </ul>
             </nav>
@@ -335,7 +337,8 @@
   对于开发者来说，CORS通信与同源的 ，AJAX通信没有差别代码完全一样。浏览器一旦发现AJAX请求跨源，
   就会自动添加一些附加的头信息，有时还会多出一次附加的请求，但用户不会有感觉。因此，实现CORS通信的关键是服务器。
   只要服务器实现了CORS接口，就可以跨源通信。CORS允许浏览器向跨源服务器，发出XMLHttpRequest请求，从而克服了AJAX只能同源使用的限制。
-</code></pre><p>AJAX简介：<br>AJAX即“Asynchronous  JavaScript  and  XML”（异步的JavaScript与XML技术）</p>
+</code></pre><a id="more"></a>
+<p>AJAX简介：<br>AJAX即“Asynchronous  JavaScript  and  XML”（异步的JavaScript与XML技术）</p>
 <p>AJAX是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
 <p>XMLHttpRequest对象是浏览器提供的一个API，用来顺畅地向服务器发送请求并解析服务器响应，当然整个过程中，浏览器页面不会被刷新。</p>
 <p>1.创建XMLHttpRequest对象<br>   var xhr = new XMLHttpRequest();<br>兼容各个浏览器的创建方法<br>2.准备请求<br>xhr.open(method,url,async);</p>
@@ -358,7 +361,7 @@
         <p><span>本文标题:</span><a href="/2018/05/31/ajax/">AJAX</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">莲灯诗梦</a></p>
         <p><span>发布时间:</span>2018-05-31, 19:41:32</p>
-        <p><span>最后更新:</span>2018-06-10, 10:21:34</p>
+        <p><span>最后更新:</span>2018-07-12, 16:46:57</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/05/31/ajax/" title="AJAX">http://yoursite.com/2018/05/31/ajax/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/05/31/ajax/　　作者: 莲灯诗梦" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -381,8 +384,8 @@
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/05/31/HTML+CSS/">
-                    HTML+CSS
+                <a href="/2018/05/31/categories/">
+                    第一个分类
                 </a>
             </div>
         
@@ -477,13 +480,13 @@
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/05/31/HTML+CSS/" title="下一篇: HTML+CSS">
+            <a href="/2018/05/31/categories/" title="下一篇: 第一个分类">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Photoshop/">Photoshop</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/English note/">English</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/书签/">书签</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/ajax/">AJAX</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/HTML+CSS/">HTML+CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/categories/">第一个分类</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/小贴士/">第二篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/My first blog/">我的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/22/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/bootstrap基础/">bootstrap基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/bootstrap-css组件/">bootstrap-css组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/12/Photoshop/">Photoshop</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/English note/">English</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/书签/">书签</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/ajax/">AJAX</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/categories/">第一个分类</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/HTML+CSS/">HTML+CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/31/小贴士/">第二篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/My first blog/">我的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/22/hello-world/">Hello World</a></li></ul>
 
 
 
