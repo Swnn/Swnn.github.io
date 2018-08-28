@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="莲灯诗梦" />
+
+
+
+<meta name="description" content="Chapter 1AngularJS官方文档是这样介绍它的：    完全使用JavaScript编写的客户端技术。同其他历史悠久的Web（HTML、CSS和JavaScript）配合使用，使Web应用开发比以往更简单，更快捷。 AngularJS是一种构建动态Web应用的结构化框架。 AngularJS通过原生的Model-View-Controller（MVC，模型-视图-控制器）功能增强了HT">
+<meta name="keywords" content="AngularJS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="再谈AngularJS">
+<meta property="og:url" content="http://yoursite.com/2018/07/20/再谈AngularJS/index.html">
+<meta property="og:site_name" content="NCのBlog">
+<meta property="og:description" content="Chapter 1AngularJS官方文档是这样介绍它的：    完全使用JavaScript编写的客户端技术。同其他历史悠久的Web（HTML、CSS和JavaScript）配合使用，使Web应用开发比以往更简单，更快捷。 AngularJS是一种构建动态Web应用的结构化框架。 AngularJS通过原生的Model-View-Controller（MVC，模型-视图-控制器）功能增强了HT">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2018/07/20/再谈AngularJS/example.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/20/再谈AngularJS/example-res.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/20/再谈AngularJS/6.2.png">
+<meta property="og:image" content="http://yoursite.com/2018/07/20/再谈AngularJS/8.1.png">
+<meta property="og:updated_time" content="2018-08-28T02:14:32.027Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="再谈AngularJS">
+<meta name="twitter:description" content="Chapter 1AngularJS官方文档是这样介绍它的：    完全使用JavaScript编写的客户端技术。同其他历史悠久的Web（HTML、CSS和JavaScript）配合使用，使Web应用开发比以往更简单，更快捷。 AngularJS是一种构建动态Web应用的结构化框架。 AngularJS通过原生的Model-View-Controller（MVC，模型-视图-控制器）功能增强了HT">
+<meta name="twitter:image" content="http://yoursite.com/2018/07/20/再谈AngularJS/example.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="NCのBlog" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.ico">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>再谈AngularJS | NCのBlog</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">莲灯诗梦</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">星子</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/随笔">随笔</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:judas.n@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" href="http://weibo.com/Swnwc" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" href="https://github.com/Swnn" title="GitHub"></a>
+                            
+                                <a class="fa 网易云音乐" href="http://music.163.com/#/user/home?id=578517803" title="网易云音乐"></a>
+                            
+                                <a class="fa QQ" href="http://wpa.qq.com/msgrd?v=3&uin=2387452337&site=qq&menu=yes" title="QQ"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AJAX/">AJAX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJS/">AngularJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML-CSS/">HTML+CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Link/">Link</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Study/">Study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tap/">Tap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/">Work</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">莲灯诗梦</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">莲灯诗梦</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">星子</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/随笔">随笔</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:judas.n@qq.com" title="Email"></a>
+                            
+                                <a class="fa 新浪微博" target="_blank" href="http://weibo.com/Swnwc" title="新浪微博"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="https://github.com/Swnn" title="GitHub"></a>
+                            
+                                <a class="fa 网易云音乐" target="_blank" href="http://music.163.com/#/user/home?id=578517803" title="网易云音乐"></a>
+                            
+                                <a class="fa QQ" target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2387452337&site=qq&menu=yes" title="QQ"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-再谈AngularJS" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/07/20/再谈AngularJS/" class="article-date">
+      <time datetime="2018-07-19T16:00:00.000Z" itemprop="datePublished">2018-07-20</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      再谈AngularJS
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/基础点/">基础点</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJS/">AngularJS</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h2><p>AngularJS官方文档是这样介绍它的：<br>    完全使用JavaScript编写的客户端技术。同其他历史悠久的Web（HTML、CSS和JavaScript）配合使用，使Web应用开发比以往更简单，更快捷。</p>
+<p>AngularJS是一种构建动态Web应用的结构化框架。</p>
+<p>AngularJS通过原生的Model-View-Controller（MVC，模型-视图-控制器）功能增强了<br>HTML。<br><a id="more"></a></p>
+<h2 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2"></a>Chapter 2</h2><p>数据绑定，已经在前面说过这里不再重复<br>一个实例：<br><img src="/2018/07/20/再谈AngularJS/example.png" title="实例"><br>运行的结果如下：<br><img src="/2018/07/20/再谈AngularJS/example-res.png" title="实例运行结果"></p>
+<h2 id="Chapter-3-模块"><a href="#Chapter-3-模块" class="headerlink" title="Chapter 3 模块"></a>Chapter 3 模块</h2><p>在AngularJS中，模块是定义应用的最主要的方式，模块包含了主要的应用代码，一个应用可以包含多个模块，每一个模块都包含了定义具体功能的代码。</p>
+<p>使用模块的好处：</p>
+<pre><code>* 1、保持全局命名空间 的清洁
+* 2、编写测试代码更容易，并能保持其清洁，以便更容易找到互相隔离的功能；
+* 3、易于在不同应用间复用代码；
+* 4、使 应用能够以任意顺序加载代码的各个部分。
+</code></pre><p>Angularjs允许我们使用angular.module()方法来声明模块，这个方法能够接受两个参数，第一个是模块的名称，第二个是依赖列表，也就是可以被注入到模块中的对象列表。angular.module(‘myApp’, [ ] );   （方括号里面就是依赖列表）。</p>
+<p>参数：angular.module()的参数列表</p>
+<pre><code>* 1、name（字符串） name是模块的名字，字符串变量
+* 2、requires（字符串数组） requires包含了一个字符串变量组成的列表，每个元素都是一个模块名称，本模块依赖于这些模块，依赖需要在本模块加载之前由注入器进行预加载。
+</code></pre><h2 id="Chapter-4-作用域"><a href="#Chapter-4-作用域" class="headerlink" title="Chapter 4 作用域"></a>Chapter 4 作用域</h2><p>作用域是视图和控制器之间的胶水。在应用将视图渲染并呈献给用户之前，视图中的模板会和作用域进行连接，然后应用会对DOM进行设置以便将属性变化通知给ANgularjs。这个功能让XHR请求等promise对象的实现变得非常容易。</p>
+<p>作用域是应用状态的基础，基于动态绑定，我们可以依赖视图在修改数据时立即更新$scope，也可以依赖$scope在其发生变化时立刻重新渲染视图。</p>
+<h3 id="视图和-scope的世界"><a href="#视图和-scope的世界" class="headerlink" title="视图和$scope的世界"></a>视图和$scope的世界</h3><p>AngularJS启动并生成视图时，会将根ng-app元素通$rootscope进行绑定、$rootscope是所有$scope对象的最上层。</p>
+<p>$scope对象在Angularjs中充当数据模型，，$scope并不负责处理和操作数据，它只是视图和HTML之间 的桥梁，它是视图和控制器的胶水。</p>
+<h3 id="Angularjs标记"><a href="#Angularjs标记" class="headerlink" title="Angularjs标记"></a>Angularjs标记</h3><p>我们可以在Angularjs应用的模板中使用多种标记，包括下面这些：</p>
+<ul>
+<li>1、指令：将DOM元素增强为可复用的DOM组件的属性或元素。</li>
+<li>2、值绑定：模板语法用两个花括号将表达式绑定到视图上。</li>
+<li>3、过滤器：可以在视图中使用的函数，用来进行格式化。</li>
+<li>4、表单控件：用来检验用户输入的控件。<h3 id="作用域基本功能"><a href="#作用域基本功能" class="headerlink" title="作用域基本功能"></a>作用域基本功能</h3>作用域基本功能</li>
+<li>1、提供观察者以监视数据模型的变化；</li>
+<li>2、可以将数据模型的变化通知给整个应用，甚至是系统外的组件；</li>
+<li>3、可以进行嵌套，隔离业务功能和数据；</li>
+<li>4、给表达式提供运算时所需的执行环境。<h3 id="scope-的生命周期"><a href="#scope-的生命周期" class="headerlink" title="$scope 的生命周期"></a>$scope 的生命周期</h3>当Angular关心的事件发生在浏览器中时，比如用户在通过ng-model属性监控的输入字段中输入，或者带有ng-click属性的按钮被点击时，Angular的事件循环都会启动。这个事件将在Angular执行上下文中处理。<br>$scope对象的生命周期有四个不同的阶段<pre><code>*1、创建：当创建控制器或指令时，AngularJS会用$injector创建一个新的作用域，并在这个新建的控制器或指令运行时将作用域传递进去。
+*2、链接：当Angular开始运行时，所有的 $scope对象都会附加或者链接到视图中。所有创建 $scope对象的函数也会将自身附加到视图中。这些作用域将会注册当Angular应用上下文中发生变化时需要运行的函数。
+*3、更新：当事件循环运行时，它通常执行在顶层 $scope对象上（被称作 $rootscope），每个子作用域都执行自己的脏值检测。每个监控函数都会检查变化，如果检测到任意变化， $scope对象就会触发指定的回调函数
+*4、销毁：当一个 $scope在视图中不再需要时，这个作用域将会清理和销毁自己。
+</code></pre><h2 id="Chapter-5-控制器"><a href="#Chapter-5-控制器" class="headerlink" title="Chapter 5 控制器"></a>Chapter 5 控制器</h2>控制器并不适合用来执行DOM操作、格式化或数据操作，以及除存储数据模型之外的状态维护操作。他只是视图和 $scope之间的桥梁。<h3 id="控制器嵌套"><a href="#控制器嵌套" class="headerlink" title="控制器嵌套"></a>控制器嵌套</h3>AngularJS应用的任何部分，无论它渲染在哪个上下文中，都有父级作用域存在。对于ng-app所处的层级来讲，它的父级作用域就是$rootScope。</li>
+</ul>
+<p>有一个例外：在指令内部创建的作用域被称作孤立作用域。</p>
+<p>默认情况下，AngularJS在当前作用域中无法找到某个属性时，便会在父级作用域中进行查找。如果Angularjs找不到对应的属性，会顺着父级作用域一直向上寻找，直到抵达$rootScope为止，如果在$rootScope中也找不到，程序会继续运行，但视图无法更新。</p>
+<p>控制器应该尽可能保持短小精悍，而在控制器中进行DOM操作和数据操作则是一个不好的实践。</p>
+<h2 id="Chapter-6-表达式"><a href="#Chapter-6-表达式" class="headerlink" title="Chapter 6 表达式"></a>Chapter 6 表达式</h2><p>用”两个花括号”符号将一个变量绑定到$scope上的写法本质上就是一个表达式。当用$watch进行监听时，AngularJS会对表达式或函数进行运算。<br>特征：</p>
+<ul>
+<li>1、所有的表达式都在其所属的作用域内部执行，并有访问本地$scope的权限；</li>
+<li>2、如果表达式发生了TypeError和ReferenceError并不会抛出异常。</li>
+<li>3、不允许使用任何流程控制能力</li>
+<li>4、可以接受过滤器和过滤器链。<h3 id="解析AngularJS表达式"><a href="#解析AngularJS表达式" class="headerlink" title="解析AngularJS表达式"></a>解析AngularJS表达式</h3>Angularjs通过$parse这个内部服务来进行表达式的运算，这个服务能够访问当前所处的作用域，这个过程允许我们访问定义在$scope上的原始JavaScript数据和函数。将$scope服务注入到控制器中，然后调用它就可以实现手动解析表达式。<h3 id="插值字符串"><a href="#插值字符串" class="headerlink" title="插值字符串"></a>插值字符串</h3>  要在字符串模板中做插值操作。需要在你的对象中注入$interpolate服务。在下面的例子中，我们将会将它注入到一个控制器中：<img src="/2018/07/20/再谈AngularJS/6.2.png">
+</li>
+</ul>
+<p>$interpolate服务是一个可以接受三个参数的函数，其中第一个参数是必需的。<br>    1、text（字符串）：一个包含字符串插值标记的字符串。<br>    2、mustHaveExpression（布尔型）：如果将这个参数设为true，当传入的字符串中不含有表达式时会返回null<br>    3、trustedContext（字符串）：AngularJS会对已经进行过字符插值操作的字符串通过$sec.getTrusted（）方法进行严格的上下文转义。</p>
+<h2 id="Chapter-7-指令简介"><a href="#Chapter-7-指令简介" class="headerlink" title="Chapter 7 指令简介"></a>Chapter 7 指令简介</h2><h3 id="自定义HTML元素和属性"><a href="#自定义HTML元素和属性" class="headerlink" title="自定义HTML元素和属性"></a>自定义HTML元素和属性</h3><p>*HTML引导<br>在HTML中将ng-app以属性的形式引用到<code>&lt;html&gt;</code>的开始标签上。就可以创建自定义指令<br><code>&lt;my-directive&gt;&lt;/my-directive&gt;</code><br>调用它这样的：<br><img src="/2018/07/20/再谈AngularJS/8.1.png"><br>directive()方法返回的对象中包含了用来定义和配置指令所需的方法和属性。为了尽快掌握简单的属性定义，我们只用了restrict和template两个设置项来定义指令。<br>    默认情况下。Angularjs将模板生成的HTML代码嵌套在自定义标签<code>&lt;my-directive&gt;</code>内部。<br>通过AngularJS模块API中的.directive()方法，我们可以通过传入一个字符串和一个函数来注册一个新指令，其中字符串是这个指令的名字，指令名应该是驼峰命名风格的，函数应该返回一个对象。<br>在我们的例子中，在HTML里使用my-directive声明指令，因此指令定义必须<br>以myDirective为名字。</p>
+<p>directive()方法返回的对象中包含了用来定义和配置指令所需的方法和属性。</p>
+<h2 id="Chapter-8-内置指令"><a href="#Chapter-8-内置指令" class="headerlink" title="Chapter 8 内置指令"></a>Chapter 8 内置指令</h2><p>AngularJS提供了一系列内置指令。其中一些指令重载了原生的HTML元素，比如<code>&lt;form&gt;</code>和<code>&lt;a&gt;</code>标签，当在HTML中使用标签时，并不一定能明确看出是否在使用指令。</p>
+<p>例如，<code>&lt;form&gt;</code>标签被从底层扩展了一系列高级功能，包括表单验证等，原生HTML表单并不会提供这些功能。</p>
+<p>其他内置指令通常以ng为前缀，很容易识别。例如后面将介绍的ng-href指令，它会提供一个超链接，这个链接将处于禁用状态，直到ng-href=”someExpresiion”中的表达式被调用并且返回一个值。</p>
+<p>最后，某些内置指令并不会有对应的HTML标签，比如ng-controller，这个指令可以在标签的属性中使用，通常在包含很多子元素并且需要共享作用域时使用。</p>
+<p>注意，所有以ng前缀开头作为命名空间的指令都是AngularJS提供的内置指令，因此不要把你自己开发的指令以这个前缀命名。</p>
+<h3 id="基础-ng-属性指令"><a href="#基础-ng-属性指令" class="headerlink" title="基础 ng 属性指令"></a>基础 ng 属性指令</h3><p>首先来看看和原生HTML标签名称相似的一组内置指令，这组指令非常容易记忆，因为仅仅<br>是在原生标签名前加上了ng前缀，包括：<br> <em> ng-href；<br> </em> ng-src；<br> <em> ng-disabled；<br> </em> ng-checked；<br> <em> ng-readonly；<br> </em> ng-selected；<br> <em> ng-class；<br> </em> ng-style。</p>
+<h3 id="布尔属性"><a href="#布尔属性" class="headerlink" title="布尔属性"></a>布尔属性</h3><ol>
+<li>ng-disabled(禁用)<br>使用ng-disabled可以把disabled属性绑定到以下表单输入字段上：<br> <code>&lt;input&gt;</code> （text、checkbox、radio、number、url, email、submit）；<br> <code>&lt;textarea&gt;</code>；<br> <code>&lt;select&gt;</code>；<br> <code>&lt;button&gt;</code>。</li>
+<li>ng-readonly<br>同其他布尔属性一样，HTML定义只会检查readonly属性是否出现，而不是它的实际值。<br>通过ng-readonly可以将某个返回真或假的表达式同是否出现readonly属性进行绑定。</li>
+<li>ng-checked<br>标准的checked属性是一个布尔属性，不需要进行赋值。通过ng-checked将某个表达式同是<br>否出现checked属性进行绑定。</li>
+<li>ng-selected<br>ng-selected可以对是否出现option标签的selected属性进行绑定<h3 id="在指令中使用子作用域"><a href="#在指令中使用子作用域" class="headerlink" title="在指令中使用子作用域"></a>在指令中使用子作用域</h3>ng-app和ng-controller是特殊的指令，因为它们会修改嵌套在它们内部的指令的作用域。ng-app为AngularJS应用创建$rootScope，ng-controller则会以$rootScope或另外一个ng-controller的作用域为原型创建新的子作用域。</li>
+</ol>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/07/20/再谈AngularJS/">再谈AngularJS</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">莲灯诗梦</a></p>
+        <p><span>发布时间:</span>2018-07-20, 00:00:00</p>
+        <p><span>最后更新:</span>2018-08-28, 10:14:32</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/07/20/再谈AngularJS/" title="再谈AngularJS">http://yoursite.com/2018/07/20/再谈AngularJS/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/07/20/再谈AngularJS/　　作者: 莲灯诗梦" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/07/30/链接集合/">
+                    链接集合
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/07/15/浅谈AngularJS/">
+                    浅谈AngularJS
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter-1"><span class="toc-number">1.</span> <span class="toc-text">Chapter 1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter-2"><span class="toc-number">2.</span> <span class="toc-text">Chapter 2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter-3-模块"><span class="toc-number">3.</span> <span class="toc-text">Chapter 3 模块</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter-4-作用域"><span class="toc-number">4.</span> <span class="toc-text">Chapter 4 作用域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#视图和-scope的世界"><span class="toc-number">4.1.</span> <span class="toc-text">视图和$scope的世界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Angularjs标记"><span class="toc-number">4.2.</span> <span class="toc-text">Angularjs标记</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#作用域基本功能"><span class="toc-number">4.3.</span> <span class="toc-text">作用域基本功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#scope-的生命周期"><span class="toc-number">4.4.</span> <span class="toc-text">$scope 的生命周期</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter-5-控制器"><span class="toc-number">5.</span> <span class="toc-text">Chapter 5 控制器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#控制器嵌套"><span class="toc-number">5.1.</span> <span class="toc-text">控制器嵌套</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter-6-表达式"><span class="toc-number">6.</span> <span class="toc-text">Chapter 6 表达式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#解析AngularJS表达式"><span class="toc-number">6.1.</span> <span class="toc-text">解析AngularJS表达式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#插值字符串"><span class="toc-number">6.2.</span> <span class="toc-text">插值字符串</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter-7-指令简介"><span class="toc-number">7.</span> <span class="toc-text">Chapter 7 指令简介</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义HTML元素和属性"><span class="toc-number">7.1.</span> <span class="toc-text">自定义HTML元素和属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter-8-内置指令"><span class="toc-number">8.</span> <span class="toc-text">Chapter 8 内置指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基础-ng-属性指令"><span class="toc-number">8.1.</span> <span class="toc-text">基础 ng 属性指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#布尔属性"><span class="toc-number">8.2.</span> <span class="toc-text">布尔属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在指令中使用子作用域"><span class="toc-number">8.3.</span> <span class="toc-text">在指令中使用子作用域</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"再谈AngularJS　| NCのBlog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2018/07/20/再谈AngularJS/" data-title="再谈AngularJS" data-url="http://yoursite.com/2018/07/20/再谈AngularJS/"></div>
+    <script>
+        var duoshuoQuery = {short_name:""};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/07/30/链接集合/" title="上一篇: 链接集合">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/07/15/浅谈AngularJS/" title="下一篇: 浅谈AngularJS">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/07/30/链接集合/">链接集合</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/20/再谈AngularJS/">再谈AngularJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/15/浅谈AngularJS/">浅谈AngularJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/10/bootstrap-JavaScript/">bootstrap-JavaScript插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/05/bootstrap基础/">bootstrap基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/29/bootstrap-css组件/">bootstrap-css组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/23/Photoshop/">Photoshop</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/20/书签/">书签</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/16/小贴士/">第二篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/11/categories/">第一个分类</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/09/English note/">English</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/05/ajax/">AJAX</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/02/HTML+CSS/">HTML+CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/My first blog/">我的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/22/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016-2018 莲灯诗梦
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 7;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
