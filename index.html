@@ -288,6 +288,234 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-书签" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/09/17/书签/" class="article-date">
+      <time datetime="2018-09-17T14:51:09.000Z" itemprop="datePublished">2018-09-17</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/09/17/书签/">Record</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="生活百科"><a href="#生活百科" class="headerlink" title="生活百科"></a>生活百科</h2><p>(接下来)第一周用HBuilder制作了系统的静态网页，两天半的时间用来做框架，后面的时间做了优化和改善，对于键盘弹起时底部会漂浮到上面的问题也得到了解决，对于系统中数据的获取部分需要与后端人员配合。<br>第二周已经开始逐步解析URL地址，使用filezilla工具将代码压缩包放到服务器内，以此来测试手机端的效果，将做出的页面尽可能地贴近<br>微信风格，因此引入了weui的样式表。<br>对于日期的问题，也得到了解决，使得输入框的类型为date即可，而默认显示当前日期时，需要选中当前的标签，增添属性为valueAsDate，<br>并创建以及赋值（new Date（）），这样输入框里面的就显示为当前的日期。<br>…….</p>
+<blockquote>
+<p>小图标下载链接：<a href="https://www.easyicon.net/" target="_blank" rel="noopener">https://www.easyicon.net/</a><br>小程序API官方文档：<a href="https://developers.weixin.qq.com/miniprogram/dev/api/" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/api/</a></p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/生活充电/">生活充电</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Life/">Life</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-跨域请求数据核心代码" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/25/跨域请求数据核心代码/" class="article-date">
+      <time datetime="2018-08-24T16:00:00.000Z" itemprop="datePublished">2018-08-25</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/25/跨域请求数据核心代码/">jQuery+AJAX跨域请求数据核心代码</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="跨域请求数据核心代码"><a href="#跨域请求数据核心代码" class="headerlink" title="跨域请求数据核心代码"></a>跨域请求数据核心代码</h2><pre><code>$.ajax({                             
+     url: url,
+    type: &apos;get&apos;,
+    dataType: &apos;jsonp&apos;,
+    success: function(data) {
+            console.log(data);
+            //undefined表示无此人，或用户名密码错误
+            if(data==undefined){     
+                $(&apos;.tips&apos;).removeClass(&apos;tips&apos;);
+            }
+</code></pre>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/进阶/">进阶</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AJAX/">AJAX</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/08/25/跨域请求数据核心代码/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-使用jquery增加元素并点击核心代码" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/08/18/使用jquery增加元素并点击核心代码/" class="article-date">
+      <time datetime="2018-08-17T16:00:00.000Z" itemprop="datePublished">2018-08-18</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/08/18/使用jquery增加元素并点击核心代码/">使用jquery+AJAX增加元素并点击核心代码</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="使用jquery增加元素并点击核心代码"><a href="#使用jquery增加元素并点击核心代码" class="headerlink" title="使用jquery增加元素并点击核心代码"></a>使用jquery增加元素并点击核心代码</h2><pre><code>$.ajax({  
+
+      url: url,
+      type: &apos;get&apos;,
+      dataType: &apos;jsonp&apos;,    
+
+      success: function(data) {
+             console.log(data);
+            var str=&apos;&apos;
+            for(var i in data){
+                str+=&apos;&lt;li id=&quot;list-li&quot;&gt;&apos;+
+                     &apos;&lt;span&gt;&apos;+data[i].STName+&apos;&lt;/span&gt;&apos;+
+                     &apos;&lt;span class=&quot;icon-right&quot;&gt;&apos;+&apos;&lt;/span&gt;&apos;+
+                     &apos;&lt;/li&gt;&apos;
+            }
+</code></pre>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/进阶/">进阶</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AJAX/">AJAX</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/08/18/使用jquery增加元素并点击核心代码/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-two-week" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -332,7 +560,7 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/进阶/">进阶</a>
+    <a class="article-category-link" href="/categories/小程序开发/">小程序开发</a><a class="article-category-link" href="/categories/小程序开发/进阶/">进阶</a>
     </div>
 
 
@@ -407,7 +635,7 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/进阶/">进阶</a>
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/进阶/">进阶</a>
     </div>
 
 
@@ -541,7 +769,7 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/基础点/">基础点</a>
+    <a class="article-category-link" href="/categories/前端框架/">前端框架</a><a class="article-category-link" href="/categories/前端框架/基础点/">基础点</a>
     </div>
 
 
@@ -614,7 +842,7 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/基础点/">基础点</a>
+    <a class="article-category-link" href="/categories/前端框架/">前端框架</a><a class="article-category-link" href="/categories/前端框架/基础点/">基础点</a>
     </div>
 
 
@@ -770,217 +998,6 @@
         <p class="article-more-link">
           <a href="/2018/07/05/bootstrap基础/#more">more >></a>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-bootstrap-css组件" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/06/29/bootstrap-css组件/" class="article-date">
-      <time datetime="2018-06-28T16:00:00.000Z" itemprop="datePublished">2018-06-29</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/29/bootstrap-css组件/">bootstrap-css组件</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="CSS组件"><a href="#CSS组件" class="headerlink" title="CSS组件"></a>CSS组件</h1><h2 id="下拉菜单（单按钮下拉菜单）"><a href="#下拉菜单（单按钮下拉菜单）" class="headerlink" title="下拉菜单（单按钮下拉菜单）"></a>下拉菜单（单按钮下拉菜单）</h2><pre><code>* .dropdown将下拉菜单触发器和下拉菜单包含在其中(下拉菜单父元素)。
-* data-toggle属性：下拉菜单触发器。取值为“dropdown”。
-* .dropdown-menu：给&lt;ul&gt;指定下拉菜单的样式。
-* .dropup：向上弹出的下拉菜单(下拉菜单父元素)。
-* 下拉菜单对齐方式：.dropdown-menu-left和.dropdown-menu-right
-* .divider：为下拉菜单添加分隔线，用于将多个链接分组。
-* .disabled：禁用的菜单项。
-</code></pre>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/基础点/">基础点</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/06/29/bootstrap-css组件/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Photoshop" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/06/23/Photoshop/" class="article-date">
-      <time datetime="2018-06-22T16:00:00.000Z" itemprop="datePublished">2018-06-23</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/23/Photoshop/">Photoshop</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="Photoshop的基础教程链接"><a href="#Photoshop的基础教程链接" class="headerlink" title="Photoshop的基础教程链接"></a>Photoshop的基础教程链接</h1><p>  人像教程：<a href="http://www.16xx8.com/photoshop/jiaocheng/28580.html" target="_blank" rel="noopener">http://www.16xx8.com/photoshop/jiaocheng/28580.html</a></p>
-<h3 id="处理发丝的方法"><a href="#处理发丝的方法" class="headerlink" title="处理发丝的方法"></a>处理发丝的方法</h3><p>链接为：<a href="https://jingyan.baidu.com/album/a948d65116c2f80a2dcd2e9a.html?picindex=4" target="_blank" rel="noopener">https://jingyan.baidu.com/album/a948d65116c2f80a2dcd2e9a.html?picindex=4</a><br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/基础点/">基础点</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/06/23/Photoshop/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-书签" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/06/20/书签/" class="article-date">
-      <time datetime="2018-06-20T14:51:09.000Z" itemprop="datePublished">2018-06-20</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/06/20/书签/">书签</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h2 id="生活百科"><a href="#生活百科" class="headerlink" title="生活百科"></a>生活百科</h2><p><strong>第一天，三点一线</strong><br><strong>第二天，三点一线</strong><br><strong>第三天、第四天</strong><br>…….<br><strong>天天天天</strong></p>
-<blockquote>
-<p>生活似乎少了点调味剂般的苦涩<br>就像是在白纸上用白色蜡笔画画<br>又有什么好炫耀绘画技术的精湛呢</p>
-</blockquote>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/生活百科/">生活百科</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Life/">Life</a></li></ul>
-    </div>
-
       
       <div class="clearfix"></div>
     </div>
