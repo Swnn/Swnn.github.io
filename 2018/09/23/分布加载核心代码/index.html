@@ -15,16 +15,18 @@
 
 
 
-<meta name="description" content="Have a nice day!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="NCのBlog">
-<meta property="og:url" content="http://yoursite.com/categories/网页开发/index.html">
+<meta name="description" content="分布加载前提是后台将数据进行分组    // 页数 var page = 0; // 每页展示5个 var size = 5; // dropload $(&amp;apos;.list&amp;apos;).dropload({     scrollArea : window,     loadDownFn : function(me){         page++;         // 拼接HTML">
+<meta name="keywords" content="分布加载">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分布加载核心代码">
+<meta property="og:url" content="http://yoursite.com/2018/09/23/分布加载核心代码/index.html">
 <meta property="og:site_name" content="NCのBlog">
-<meta property="og:description" content="Have a nice day!">
+<meta property="og:description" content="分布加载前提是后台将数据进行分组    // 页数 var page = 0; // 每页展示5个 var size = 5; // dropload $(&amp;apos;.list&amp;apos;).dropload({     scrollArea : window,     loadDownFn : function(me){         page++;         // 拼接HTML">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-10-06T11:14:10.267Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NCのBlog">
-<meta name="twitter:description" content="Have a nice day!">
+<meta name="twitter:title" content="分布加载核心代码">
+<meta name="twitter:description" content="分布加载前提是后台将数据进行分组    // 页数 var page = 0; // 每页展示5个 var size = 5; // dropload $(&amp;apos;.list&amp;apos;).dropload({     scrollArea : window,     loadDownFn : function(me){         page++;         // 拼接HTML">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Category: 网页开发 | NCのBlog</title>
+<title>分布加载核心代码 | NCのBlog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -66,10 +68,10 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
-        isCategory: true,
+        isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
         search: true
@@ -281,282 +283,272 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-分布加载核心代码" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/09/27/记住密码功能核心代码/" class="archive-article-date">
-      <time datetime="2018-09-26T16:00:00.000Z" itemprop="datePublished">09-27</time>
+    <div class="article-meta">
+      <a href="/2018/09/23/分布加载核心代码/" class="article-date">
+      <time datetime="2018-09-22T16:00:00.000Z" itemprop="datePublished">2018-09-23</time>
 </a>
 
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/27/记住密码功能核心代码/">记住密码功能实现</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      分布加载核心代码
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
     <div class="article-category tagcloud">
     <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/进阶/">进阶</a>
     </div>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/rememberPWD/">rememberPWD</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/09/23/分布加载核心代码/" class="archive-article-date">
-      <time datetime="2018-09-22T16:00:00.000Z" itemprop="datePublished">09-23</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/23/分布加载核心代码/">分布加载核心代码</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/进阶/">进阶</a>
-    </div>
-
-
-          
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/分布加载/">分布加载</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h2 id="分布加载"><a href="#分布加载" class="headerlink" title="分布加载"></a>分布加载</h2><p>前提是后台将数据进行分组</p>
+<pre><code>   // 页数
+var page = 0;
+// 每页展示5个
+var size = 5;
+// dropload
+$(&apos;.list&apos;).dropload({
+    scrollArea : window,
+    loadDownFn : function(me){
+        page++;
+        // 拼接HTML
+        var str=&apos;&apos;
+        var url=&quot;http://gyw2.guanyue369.com/GYWeightWebService2/WebApi/Station.ashx&quot;+&quot;?loginname=&quot;+loginname+&quot;&amp;page=&quot;+page+&apos;&amp;size=&apos;+size            
+</code></pre><a id="more"></a>
+<pre><code>        console.log(url)
+        $.ajax({  
+             url: url,
+             type: &apos;get&apos;,
+             dataType: &apos;jsonp&apos;,             
+             success: function(data) {
+                    console.log(data);
+                    var arrLen = data.length;
+
+                    if(arrLen&gt;0){
+                        for(var i=0; i&lt;arrLen; i++){
+                            str+=&apos;&lt;li class=&quot;opacity&quot; id=&quot;list-li&quot;&gt;&apos;+
+                            &apos;&lt;span&gt;&apos;+data[i].STName+&apos;&lt;/span&gt;&apos;+
+                            &apos;&lt;span class=&quot;icon-right&quot;&gt;&apos;+&apos;&lt;/span&gt;&apos;+
+                            &apos;&lt;/li&gt;&apos;
+                        }
+                    }else{
+                        // 锁定
+                        me.lock();
+                        // 无数据
+                        me.noData();
+                    }
+                    setTimeout(function(){
+                        // 插入数据到页面，放到最后面
+                        //var list=document.getElementById(&quot;list-ul&quot;)
+                        //list.innerHTML=str;/
+                        $(&apos;#list-ul&apos;).append(str);
+                        // 每次数据插入，必须重置
+                        me.resetload();
+                    },1000);
+
+                    $(&quot;li&quot;).on(&apos;click&apos;,function(){
+                        $(location).attr(&apos;href&apos;,&apos;../hsy/detail-info.html&apos;);
+                    });
+             },
+            error: function(data){
+                    console.log(&apos;Ajax error!&apos;);
+                    // 即使加载出错，也得重置
+                    me.resetload();
+            }
+        });
+    }
+});
+</code></pre><p>如果需要淡入淡出效果，给css计加入以下代码：</p>
+<pre><code>    .opacity{
+    -webkit-animation: opacity 0.3s linear;
+    animation: opacity 0.3s linear;
+}
+@-webkit-keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@keyframes opacity {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+</code></pre>
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/09/23/分布加载核心代码/">分布加载核心代码</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">莲灯诗梦</a></p>
+        <p><span>发布时间:</span>2018-09-23, 00:00:00</p>
+        <p><span>最后更新:</span>2018-10-06, 19:14:10</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/09/23/分布加载核心代码/" title="分布加载核心代码">http://yoursite.com/2018/09/23/分布加载核心代码/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/09/23/分布加载核心代码/　　作者: 莲灯诗梦" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2018/09/27/记住密码功能核心代码/">
+                    记住密码功能实现
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2018/09/17/书签/">
+                    Record
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/08/25/跨域请求数据核心代码/" class="archive-article-date">
-      <time datetime="2018-08-24T16:00:00.000Z" itemprop="datePublished">08-25</time>
-</a>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#分布加载"><span class="toc-number">1.</span> <span class="toc-text">分布加载</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
 
 
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
         </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/25/跨域请求数据核心代码/">jQuery+AJAX跨域请求数据核心代码</a>
-    </h1>
-  
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"分布加载核心代码　| NCのBlog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
 
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/进阶/">进阶</a>
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2018/09/23/分布加载核心代码/" data-title="分布加载核心代码" data-url="http://yoursite.com/2018/09/23/分布加载核心代码/"></div>
+    <script>
+        var duoshuoQuery = {short_name:""};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/09/27/记住密码功能核心代码/" title="上一篇: 记住密码功能实现">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2018/09/17/书签/" title="下一篇: Record">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
 
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AJAX/">AJAX</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/08/18/使用jquery增加元素并点击核心代码/" class="archive-article-date">
-      <time datetime="2018-08-17T16:00:00.000Z" itemprop="datePublished">08-18</time>
-</a>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/27/记住密码功能核心代码/">记住密码功能实现</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/23/分布加载核心代码/">分布加载核心代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/17/书签/">Record</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/25/跨域请求数据核心代码/">jQuery+AJAX跨域请求数据核心代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/18/使用jquery增加元素并点击核心代码/">使用jquery+AJAX增加元素并点击核心代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/12/two-week/">小程序接口</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/08/about_requestdata/">请求数据几种方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/30/链接集合/">链接集合</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/20/再谈AngularJS/">再谈AngularJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/15/浅谈AngularJS/">浅谈AngularJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/10/bootstrap-JavaScript/">bootstrap-JavaScript插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/05/bootstrap基础/">bootstrap基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/29/bootstrap-css组件/">bootstrap-css组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/23/Photoshop/">Photoshop</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/16/小贴士/">第二篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/11/categories/">第一个分类</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/09/English note/">English</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/05/ajax/">AJAX</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/02/HTML+CSS/">HTML+CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/My first blog/">我的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/22/hello-world/">Hello World</a></li></ul>
 
 
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/18/使用jquery增加元素并点击核心代码/">使用jquery+AJAX增加元素并点击核心代码</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/进阶/">进阶</a>
-    </div>
 
 
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AJAX/">AJAX</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/08/08/about_requestdata/" class="archive-article-date">
-      <time datetime="2018-08-07T16:00:00.000Z" itemprop="datePublished">08-08</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/08/08/about_requestdata/">请求数据几种方式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/进阶/">进阶</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/请求数据/">请求数据</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-pages">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/06/05/ajax/" class="archive-article-date">
-      <time datetime="2018-06-05T11:41:32.000Z" itemprop="datePublished">06-05</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/05/ajax/">AJAX</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/易忘/">易忘</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AJAX/">AJAX</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2018/06/02/HTML+CSS/" class="archive-article-date">
-      <time datetime="2018-06-01T16:00:00.000Z" itemprop="datePublished">06-02</time>
-</a>
-
-
-        </div>
-         
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/02/HTML+CSS/">HTML+CSS</a>
-    </h1>
-  
-
-        <div class="article-info info-on-archive">
-          
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/基础点/">基础点</a>
-    </div>
-
-
-          
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML-CSS/">HTML+CSS</a></li></ul>
-    </div>
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
