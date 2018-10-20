@@ -203,7 +203,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AJAX/">AJAX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJS/">AngularJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML-CSS/">HTML+CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Link/">Link</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Study/">Study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tap/">Tap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/">Work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rememberPWD/">rememberPWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布加载/">分布加载</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信小程序/">微信小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/请求数据/">请求数据</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AJAX/">AJAX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AJAX简单应用/">AJAX简单应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJS/">AngularJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML-CSS/">HTML+CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Link/">Link</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Study/">Study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tap/">Tap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/">Work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dropload/">dropload</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rememberPWD/">rememberPWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布加载/">分布加载</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信小程序/">微信小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/请求数据/">请求数据</a></li></ul>
                     </div>
                 </section>
                 
@@ -288,6 +288,172 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-定位与继续加载核心代码" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/10/10/定位与继续加载核心代码/" class="article-date">
+      <time datetime="2018-10-09T16:00:00.000Z" itemprop="datePublished">2018-10-10</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/10/定位与继续加载核心代码/">定位与继续加载核心代码</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="滚动条定位与上拉继续加载"><a href="#滚动条定位与上拉继续加载" class="headerlink" title="滚动条定位与上拉继续加载"></a>滚动条定位与上拉继续加载</h2><pre><code>var tabLoadEnd = false;
+var pageindex = -1;
+//点击磅单列表触发的事件
+$(&apos;#bdlb-title&apos;).click(function() {
+    //获取窗口的位置
+ var offset = document.body.scrollTop;  
+    //清空list内容
+$(&quot;.list&quot;).html(&quot;&quot;) 
+ //点击另外一个tab
+$(&quot;#zdzy-title&quot;).click(function() { 
+    // 锁
+    console.log(&quot;false&quot;)
+    // 锁定
+    dropload.lock();
+</code></pre>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/核心代码/">核心代码</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/dropload/">dropload</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/10/10/定位与继续加载核心代码/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-小知识汇总" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/10/06/小知识汇总/" class="article-date">
+      <time datetime="2018-10-05T16:00:00.000Z" itemprop="datePublished">2018-10-06</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/10/06/小知识汇总/">小知识总汇</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h2 id="小知识汇总"><a href="#小知识汇总" class="headerlink" title="小知识汇总"></a>小知识汇总</h2><h3 id="日期的选择代码"><a href="#日期的选择代码" class="headerlink" title="日期的选择代码"></a>日期的选择代码</h3><p>前期工作:需要引入weui的JS文件</p>
+<pre><code>var dt = new Date();
+var df = [dt.getFullYear(), (dt.getMonth() + 1), dt.getDate()];
+var id = dt.getFullYear() + &quot;&quot; + dt.getMonth() + &quot;&quot; + dt.getDate();
+var date = dt.getFullYear() + &quot;-&quot; + (dt.getMonth() + 1) + &quot;-&quot; + dt.getDate()
+$(&apos;#datetime-picker&apos;).on(&apos;focus&apos;, function() {
+    weui.datePicker({
+        id: &quot;start&quot; + id,
+        start: 2000,
+        end: dt.getFullYear() + 20,
+        defaultValue: date,
+        onConfirm: function(result) {
+            $(&quot;#datetime-picker&quot;).val(result[0].label.replace(&quot;年&quot;, &quot;-&quot;) + result[1].label.replace(&quot;月&quot;, &quot;-&quot;) + result[2].label
+                .replace(&quot;日&quot;, &quot;&quot;));
+        }
+    });
+</code></pre>
+          
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/核心代码/">核心代码</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tap/">Tap</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/10/06/小知识汇总/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-记住密码功能核心代码" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -328,7 +494,7 @@
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/进阶/">进阶</a>
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/核心代码/">核心代码</a>
     </div>
 
 
@@ -409,7 +575,7 @@ $(&apos;.list&apos;).dropload({
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/进阶/">进阶</a>
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/核心代码/">核心代码</a>
     </div>
 
 
@@ -554,7 +720,7 @@ $(&apos;.list&apos;).dropload({
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/进阶/">进阶</a>
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/核心代码/">核心代码</a>
     </div>
 
 
@@ -637,13 +803,13 @@ $(&apos;.list&apos;).dropload({
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/进阶/">进阶</a>
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/核心代码/">核心代码</a>
     </div>
 
 
       
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AJAX/">AJAX</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AJAX简单应用/">AJAX简单应用</a></li></ul>
     </div>
 
       
@@ -786,7 +952,7 @@ $(&apos;.list&apos;).dropload({
       
       
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/进阶/">进阶</a>
+    <a class="article-category-link" href="/categories/网页开发/">网页开发</a><a class="article-category-link" href="/categories/网页开发/核心代码/">核心代码</a>
     </div>
 
 
@@ -863,149 +1029,6 @@ $(&apos;.list&apos;).dropload({
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Link/">Link</a></li></ul>
     </div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-再谈AngularJS" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/07/20/再谈AngularJS/" class="article-date">
-      <time datetime="2018-07-19T16:00:00.000Z" itemprop="datePublished">2018-07-20</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/20/再谈AngularJS/">再谈AngularJS</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h2 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h2><p>AngularJS官方文档是这样介绍它的：<br>    完全使用JavaScript编写的客户端技术。同其他历史悠久的Web（HTML、CSS和JavaScript）配合使用，使Web应用开发比以往更简单，更快捷。</p>
-<p>AngularJS是一种构建动态Web应用的结构化框架。</p>
-<p>AngularJS通过原生的Model-View-Controller（MVC，模型-视图-控制器）功能增强了<br>HTML。<br>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/前端框架/">前端框架</a><a class="article-category-link" href="/categories/前端框架/基础点/">基础点</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJS/">AngularJS</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/07/20/再谈AngularJS/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-浅谈AngularJS" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/07/15/浅谈AngularJS/" class="article-date">
-      <time datetime="2018-07-14T16:00:00.000Z" itemprop="datePublished">2018-07-15</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/15/浅谈AngularJS/">浅谈AngularJS</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>AngularJS表达式通过$parse服务器解析执行<br>与JavaScript表达式的区别：</p>
-<pre><code>*1、属性求值：所有属性的求值是对于scope的，而JavaScript是对于W indow对象的。
-*2、宽容：表达式求值，对于undefined和null，Angular是宽容的，但JavaScript会产生NullPointExceptions。
-*3、没有流程控制语句：在Angular表达式里，不能做以下任何事：条件分支、循环、抛出异常。
-*4、过滤器（filter）：我们可以就将表达式的结果传入过滤器链（filter chains）
-</code></pre>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/前端框架/">前端框架</a><a class="article-category-link" href="/categories/前端框架/基础点/">基础点</a>
-    </div>
-
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AngularJS/">AngularJS</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/07/15/浅谈AngularJS/#more">more >></a>
-        </p>
       
       <div class="clearfix"></div>
     </div>
