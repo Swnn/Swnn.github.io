@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="小知识汇总日期的选择代码前期工作:需要引入weui的JS文件 var dt = new Date(); var df = [dt.getFullYear(), (dt.getMonth() + 1), dt.getDate()]; var id = dt.getFullYear() + &amp;quot;&amp;quot; + dt.getMonth() + &amp;quot;&amp;quot; + dt.getDate">
-<meta name="keywords" content="Tap">
+<meta name="description" content="事件委托点击事件//利用事件委托为a添加点击事件并获取榜单编号 alists.addEventListener(&amp;quot;click&amp;quot;,function(event){     event.preventDefault();     var target=event.target;     weightno=target.childNodes[1];     var weightn=w">
+<meta name="keywords" content="事件委托">
 <meta property="og:type" content="article">
-<meta property="og:title" content="小知识总汇">
-<meta property="og:url" content="http://yoursite.com/2018/10/06/小知识汇总/index.html">
+<meta property="og:title" content="事件委托点击事件">
+<meta property="og:url" content="http://yoursite.com/2018/10/21/事件委托方式点击a或li列表/index.html">
 <meta property="og:site_name" content="NCのBlog">
-<meta property="og:description" content="小知识汇总日期的选择代码前期工作:需要引入weui的JS文件 var dt = new Date(); var df = [dt.getFullYear(), (dt.getMonth() + 1), dt.getDate()]; var id = dt.getFullYear() + &amp;quot;&amp;quot; + dt.getMonth() + &amp;quot;&amp;quot; + dt.getDate">
+<meta property="og:description" content="事件委托点击事件//利用事件委托为a添加点击事件并获取榜单编号 alists.addEventListener(&amp;quot;click&amp;quot;,function(event){     event.preventDefault();     var target=event.target;     weightno=target.childNodes[1];     var weightn=w">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-20T12:40:01.015Z">
+<meta property="og:updated_time" content="2018-11-09T13:55:16.823Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="小知识总汇">
-<meta name="twitter:description" content="小知识汇总日期的选择代码前期工作:需要引入weui的JS文件 var dt = new Date(); var df = [dt.getFullYear(), (dt.getMonth() + 1), dt.getDate()]; var id = dt.getFullYear() + &amp;quot;&amp;quot; + dt.getMonth() + &amp;quot;&amp;quot; + dt.getDate">
+<meta name="twitter:title" content="事件委托点击事件">
+<meta name="twitter:description" content="事件委托点击事件//利用事件委托为a添加点击事件并获取榜单编号 alists.addEventListener(&amp;quot;click&amp;quot;,function(event){     event.preventDefault();     var target=event.target;     weightno=target.childNodes[1];     var weightn=w">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>小知识总汇 | NCのBlog</title>
+<title>事件委托点击事件 | NCのBlog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -200,7 +200,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AJAX/">AJAX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AJAX简单应用/">AJAX简单应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJS/">AngularJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML-CSS/">HTML+CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Link/">Link</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Study/">Study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tap/">Tap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/">Work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dropload/">dropload</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rememberPWD/">rememberPWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布加载/">分布加载</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信小程序/">微信小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/请求数据/">请求数据</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AJAX/">AJAX</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AJAX简单应用/">AJAX简单应用</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AngularJS/">AngularJS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML-CSS/">HTML+CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Link/">Link</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PhotoShop/">PhotoShop</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Study/">Study</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tap/">Tap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/">Work</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dropload/">dropload</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iframe与a链接/">iframe与a链接</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/rememberPWD/">rememberPWD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/事件委托/">事件委托</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/分布加载/">分布加载</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小知识总汇/">小知识总汇</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信小程序/">微信小程序</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/请求数据/">请求数据</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/跳转指定选项卡/">跳转指定选项卡</a></li></ul>
                     </div>
                 </section>
                 
@@ -283,11 +283,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap"><article id="post-小知识汇总" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-事件委托方式点击a或li列表" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/10/06/小知识汇总/" class="article-date">
-      <time datetime="2018-10-05T16:00:00.000Z" itemprop="datePublished">2018-10-06</time>
+      <a href="/2018/10/21/事件委托方式点击a或li列表/" class="article-date">
+      <time datetime="2018-10-20T16:00:00.000Z" itemprop="datePublished">2018-10-21</time>
 </a>
 
 
@@ -302,7 +302,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      小知识总汇
+      事件委托点击事件
     </h1>
   
 
@@ -317,7 +317,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tap/">Tap</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/事件委托/">事件委托</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -327,33 +327,16 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="小知识汇总"><a href="#小知识汇总" class="headerlink" title="小知识汇总"></a>小知识汇总</h2><h3 id="日期的选择代码"><a href="#日期的选择代码" class="headerlink" title="日期的选择代码"></a>日期的选择代码</h3><p>前期工作:需要引入weui的JS文件</p>
-<pre><code>var dt = new Date();
-var df = [dt.getFullYear(), (dt.getMonth() + 1), dt.getDate()];
-var id = dt.getFullYear() + &quot;&quot; + dt.getMonth() + &quot;&quot; + dt.getDate();
-var date = dt.getFullYear() + &quot;-&quot; + (dt.getMonth() + 1) + &quot;-&quot; + dt.getDate()
-$(&apos;#datetime-picker&apos;).on(&apos;focus&apos;, function() {
-    weui.datePicker({
-        id: &quot;start&quot; + id,
-        start: 2000,
-        end: dt.getFullYear() + 20,
-        defaultValue: date,
-        onConfirm: function(result) {
-            $(&quot;#datetime-picker&quot;).val(result[0].label.replace(&quot;年&quot;, &quot;-&quot;) + result[1].label.replace(&quot;月&quot;, &quot;-&quot;) + result[2].label
-                .replace(&quot;日&quot;, &quot;&quot;));
-        }
-    });
-</code></pre><a id="more"></a>
-<h3 id="非双向绑定两个日期的值"><a href="#非双向绑定两个日期的值" class="headerlink" title="非双向绑定两个日期的值"></a>非双向绑定两个日期的值</h3><pre><code>var defaultDate = document.querySelectorAll(&apos;#datetime-picker&apos;);
-if(defaultDate)
-defaultDate[1].value=defaultDate[0].value
-</code></pre><h3 id="清空一个div内的HTML"><a href="#清空一个div内的HTML" class="headerlink" title="清空一个div内的HTML"></a>清空一个div内的HTML</h3><pre><code>$(&quot;#div&quot;).html(&quot;&quot;)
-</code></pre><h3 id="日期输入框消除键盘弹出"><a href="#日期输入框消除键盘弹出" class="headerlink" title="日期输入框消除键盘弹出"></a>日期输入框消除键盘弹出</h3><pre><code>$(&quot;#datetime-picker&quot;).focus(function() {
-    document.activeElement.blur();
-});
-</code></pre><p>很神奇的哎！！！</p>
-<h3 id="获取前一天的日期并格式化"><a href="#获取前一天的日期并格式化" class="headerlink" title="获取前一天的日期并格式化"></a>获取前一天的日期并格式化</h3><pre><code>var yesterdsay = new Date(new Date().getTime() - 86400000);
-var yesterday=yesterdsay.format(&quot;yyyy-MM-dd&quot;);
+        <h2 id="事件委托点击事件"><a href="#事件委托点击事件" class="headerlink" title="事件委托点击事件"></a>事件委托点击事件</h2><p>//利用事件委托为a添加点击事件并获取榜单编号</p>
+<pre><code>alists.addEventListener(&quot;click&quot;,function(event){
+    event.preventDefault();
+    var target=event.target;
+    weightno=target.childNodes[1];
+    var weightn=weightno.childNodes[0];
+    var weightno1=weightn.innerHTML;
+    localStorage.setItem(&quot;weightno&quot;,weightno1);       
+    $(location).attr(&apos;href&apos;, &apos;./weight-page.html?weightno=&apos; + weightno1)
+},false)        
 </code></pre>
       
     </div>
@@ -362,13 +345,13 @@ var yesterday=yesterdsay.format(&quot;yyyy-MM-dd&quot;);
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2018/10/06/小知识汇总/">小知识总汇</a></p>
+        <p><span>本文标题:</span><a href="/2018/10/21/事件委托方式点击a或li列表/">事件委托点击事件</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">莲灯诗梦</a></p>
-        <p><span>发布时间:</span>2018-10-06, 00:00:00</p>
-        <p><span>最后更新:</span>2018-10-20, 20:40:01</p>
+        <p><span>发布时间:</span>2018-10-21, 00:00:00</p>
+        <p><span>最后更新:</span>2018-11-09, 21:55:16</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/10/06/小知识汇总/" title="小知识总汇">http://yoursite.com/2018/10/06/小知识汇总/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/10/06/小知识汇总/　　作者: 莲灯诗梦" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2018/10/21/事件委托方式点击a或li列表/" title="事件委托点击事件">http://yoursite.com/2018/10/21/事件委托方式点击a或li列表/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/10/21/事件委托方式点击a或li列表/　　作者: 莲灯诗梦" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -381,15 +364,15 @@ var yesterday=yesterdsay.format(&quot;yyyy-MM-dd&quot;);
     <nav id="article-nav">
         
             <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/10/10/定位与继续加载核心代码/">
-                    定位与继续加载核心代码
+                <a href="/2018/10/25/跳转指定选项卡/">
+                    跳转到指定选项卡
                 </a>
             </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2018/09/27/记住密码功能核心代码/">
-                    记住密码功能实现
+                <a href="/2018/10/18/iframe与a搭配使用/">
+                    iframe与a链接
                 </a>
             </div>
         
@@ -401,7 +384,7 @@ var yesterday=yesterdsay.format(&quot;yyyy-MM-dd&quot;);
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#小知识汇总"><span class="toc-number">1.</span> <span class="toc-text">小知识汇总</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#日期的选择代码"><span class="toc-number">1.1.</span> <span class="toc-text">日期的选择代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#非双向绑定两个日期的值"><span class="toc-number">1.2.</span> <span class="toc-text">非双向绑定两个日期的值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#清空一个div内的HTML"><span class="toc-number">1.3.</span> <span class="toc-text">清空一个div内的HTML</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#日期输入框消除键盘弹出"><span class="toc-number">1.4.</span> <span class="toc-text">日期输入框消除键盘弹出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#获取前一天的日期并格式化"><span class="toc-number">1.5.</span> <span class="toc-text">获取前一天的日期并格式化</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#事件委托点击事件"><span class="toc-number">1.</span> <span class="toc-text">事件委托点击事件</span></a></li></ol>
         
     </div>
     <style>
@@ -437,7 +420,7 @@ var yesterday=yesterdsay.format(&quot;yyyy-MM-dd&quot;);
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"小知识总汇　| NCのBlog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"事件委托点击事件　| NCのBlog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -453,7 +436,7 @@ var yesterday=yesterdsay.format(&quot;yyyy-MM-dd&quot;);
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2018/10/06/小知识汇总/" data-title="小知识总汇" data-url="http://yoursite.com/2018/10/06/小知识汇总/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2018/10/21/事件委托方式点击a或li列表/" data-title="事件委托点击事件" data-url="http://yoursite.com/2018/10/21/事件委托方式点击a或li列表/"></div>
     <script>
         var duoshuoQuery = {short_name:""};
         var loadComment = function(){
@@ -476,7 +459,7 @@ var yesterday=yesterdsay.format(&quot;yyyy-MM-dd&quot;);
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/10/10/定位与继续加载核心代码/" title="上一篇: 定位与继续加载核心代码">
+            <a href="/2018/10/25/跳转指定选项卡/" title="上一篇: 跳转到指定选项卡">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -484,13 +467,13 @@ var yesterday=yesterdsay.format(&quot;yyyy-MM-dd&quot;);
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2018/09/27/记住密码功能核心代码/" title="下一篇: 记住密码功能实现">
+            <a href="/2018/10/18/iframe与a搭配使用/" title="下一篇: iframe与a链接">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/10/定位与继续加载核心代码/">定位与继续加载核心代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/06/小知识汇总/">小知识总汇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/27/记住密码功能核心代码/">记住密码功能实现</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/23/分布加载核心代码/">分布加载核心代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/17/书签/">Record</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/25/跨域请求数据核心代码/">jQuery+AJAX跨域请求数据核心代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/18/使用jquery增加元素并点击核心代码/">使用jquery+AJAX增加元素并点击核心代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/12/two-week/">小程序接口</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/08/about_requestdata/">请求数据几种方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/30/链接集合/">链接集合</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/20/再谈AngularJS/">再谈AngularJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/15/浅谈AngularJS/">浅谈AngularJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/10/bootstrap-JavaScript/">bootstrap-JavaScript插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/05/bootstrap基础/">bootstrap基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/29/bootstrap-css组件/">bootstrap-css组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/23/Photoshop/">Photoshop</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/16/小贴士/">第二篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/11/categories/">第一个分类</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/09/English note/">English</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/05/ajax/">AJAX</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/02/HTML+CSS/">HTML+CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/My first blog/">我的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/22/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/10/25/跳转指定选项卡/">跳转到指定选项卡</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/21/事件委托方式点击a或li列表/">事件委托点击事件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/18/iframe与a搭配使用/">iframe与a链接</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/15/小知识汇总/">小知识总汇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/10/10/定位与继续加载核心代码/">定位与继续加载核心代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/27/记住密码功能核心代码/">记住密码功能实现</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/23/分布加载核心代码/">分布加载核心代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/09/17/书签/">Record</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/25/跨域请求数据核心代码/">jQuery+AJAX跨域请求数据核心代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/18/使用jquery增加元素并点击核心代码/">使用jquery+AJAX增加元素并点击核心代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/12/two-week/">小程序接口</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/08/08/about_requestdata/">请求数据几种方式</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/30/链接集合/">链接集合</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/20/再谈AngularJS/">再谈AngularJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/15/浅谈AngularJS/">浅谈AngularJS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/10/bootstrap-JavaScript/">bootstrap-JavaScript插件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/05/bootstrap基础/">bootstrap基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/29/bootstrap-css组件/">bootstrap-css组件</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/23/Photoshop/">Photoshop</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/16/小贴士/">第二篇</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/11/categories/">第一个分类</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/09/English note/">English</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/05/ajax/">AJAX</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/06/02/HTML+CSS/">HTML+CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/05/12/My first blog/">我的博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/22/hello-world/">Hello World</a></li></ul>
 
 
 
